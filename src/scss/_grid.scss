@@ -1,0 +1,13 @@
+.container {
+    max-width: $container + ($container-gap * 2);
+    width: 100%;
+    padding-left: $container-gap;
+    padding-right: $container-gap;
+    margin: 0 auto;
+
+    @media (max-width: $mobile-l) {
+        padding-left: $container-gap-mobile;
+        padding-right: $container-gap-mobile;
+    }
+}
+

@@ -1,0 +1,66 @@
+// ================ Colors Start ================
+// Text
+$text-primary: #6e5263;
+$text-light: #fff;
+$text-gold: #f6ba4d;
+$title-primary: #732753;
+$title-second: #814268;
+$section-title-color: #410e2d;
+$card-title-color: #a24b7f;
+$link-hover: findLightColor($title-primary, 40%); 
+$link-active: findLightColor($title-primary, 50%); 
+
+// Blocks Rating
+$rating-green: #7c9f1d;
+$rating-blue: #0a8688;
+$rating-red: #ff3b78;
+$rating-orange: #c99100;
+
+$bg-tab-button: #FEEFD3;
+$bg-tab-button-select: #F6BA4D;
+$bg-tab-button-hover: findLightColor($bg-tab-button-select, 60%);
+$bg-tab-button-active: findLightColor($bg-tab-button-select, 50%);
+
+
+// Background
+$bg-item-gold: #eedec2;
+$bg-item-silver: #d5d0d0;
+$bg-item-bronze: #ffd2e6;
+$bg-item-default: #f8f6f2;
+$bg-solid-button: #F6BA4D;
+$bg-light: #B48DA6;
+$bg-dark: #732753;
+$bg-lang-icon: #CEA2B8;
+$bg-lang-dropdown: #852253;
+$bg-lang-item-hover: #9B456F;
+// ================ Colors End ================
+
+$shadow-card: 0 0 40px rgba(168, 189, 218, .3);
+
+// ================ Font Size Start ================
+$fs-text: 16px;
+$fs-title: 24px;
+$fs-subititle: 18px;
+// ================ Font Size End ================
+
+
+// ================ Responsive Start ================
+$laptop-l: 1440px;
+$laptop: 1024px;
+$tablet: 768px;
+$mobile-l: 425px;
+$mobile-m: 375px;
+$mobile-s: 320px;
+// ================ Responsive End ================
+
+
+// ================ Custom Vars Start ================
+$ff-main: 'Albertus', serif;
+$tr: .3s;
+$container: 1300px;
+$container-gap: 24px;
+$container-gap-mobile: 16px;
+$radius: 16px;
+$radius-round: 50%;
+$min-hover: 769px; // Минимальное разрешения экрана для hover-эффекта
+// ================ Custom Vars End ================

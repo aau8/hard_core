@@ -1,0 +1,65 @@
+@import '_mixins'; // Миксины
+@import '_fonts'; // Шрифты
+@import '_vars'; // Переменные
+@import '_reset'; // Сброс css
+
+
+// Общие стили для страниц
+// @include selection {} // Стиль выделения элементов на странице
+// @include scrollbar(); // Стиль скроллбара
+
+
+html {
+    // scroll-behavior: smooth;
+}
+
+body {
+    font-family: $ff-main;
+    color: $text-primary;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.2;
+
+    &._lock {
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    & > .content {
+        flex: 1 0 auto;
+    }
+}
+
+@import '_grid'; // Сетка
+
+// Анимация
+@import './_animation';
+
+// Компоненты
+@import './components/_buttons';
+// @import './components/_forms';
+// @import './components/_modal';
+ 
+// Текстовые компоненты
+@import './components/text/_text';
+@import './components/text/_titles';
+
+// Секции
+@import './sections/_header';
+@import './sections/_main';
+@import './sections/_footer';
+
+
+
+.block {
+    background: green;
+}

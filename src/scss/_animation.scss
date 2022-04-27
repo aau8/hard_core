@@ -1,0 +1,9 @@
+// Вращение элемента вокруг своей оси
+@keyframes spinAround {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
