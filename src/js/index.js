@@ -152,15 +152,6 @@ function tabs() {
 }
 
 // // Показывает стрелку "наверх" при скролле, равному высоте экрана
-// find('.btt__button').addEventListener('click', e => {
-//     window.scrollBy(0, -window.scrollY)
-// })
-
-// // Показать плашку смены языка
-// const cl = find('.cl')
-// const clBtn = cl.querySelector('.cl__button')
-// const clDropdown = cl.querySelector('.cl__dropdown')
-
-// clBtn.addEventListener('click', e => {
-//     clDropdown.classList.toggle('_show')
-// })
+document.querySelector('.back-to-top').addEventListener('click', e => {
+    window.scrollBy(0, -window.scrollY)
+})

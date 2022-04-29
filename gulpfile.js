@@ -62,4 +62,13 @@ export const prod = series(
     tasks,
 )
 
+export const prodNotImages = series(
+    cleanDist,
+    series(
+        htmlBuild,
+        cssBuild,
+        jsBuild
+    )
+)
+
 gulp.task('default', dev)

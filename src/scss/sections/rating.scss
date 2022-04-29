@@ -84,6 +84,10 @@
                     font-size: 12px;
                 }
 
+                @media (max-width: 350px) {
+                    font-size: 10px;
+                }
+
                 &:first-child {
                     // padding-left: 30px;
 
@@ -124,6 +128,10 @@
         @media (max-width: 390px) {
             font-size: 12px;
         }
+
+        @media (max-width: 350px) {
+            font-size: 10px;
+        }
         
         & tr {
             position: relative;
@@ -144,7 +152,7 @@
                 }
 
                 &:first-child {
-                    // padding-left: 30px;
+                    padding-right: 4px;
 
                     // @media (max-width: $laptop) {
                     //     padding-left: 16px;
@@ -176,7 +184,9 @@
                             margin-right: 24px;
 
                             @media (max-width: $mobile-m) {
-                                margin-right: 16px;
+                                width: 16px;
+                                height: 16px;
+                                margin-right: 12px;
                             }
 
                             &::before {
@@ -187,7 +197,12 @@
                                 transform: translate(-50%, -50%);
                                 width: 52px;
                                 height: 24px;
-                                background: center/contain no-repeat url('@img/rating/avatar-arrows.png')
+                                background: center/contain no-repeat url('@img/rating/avatar-arrows.png');
+
+                                @media (max-width: $mobile-m) {
+                                    width: 46px;
+                                    height: 18px;
+                                }
                             }
 
                             & img {
@@ -209,6 +224,10 @@
 
                             @media (max-width: $laptop) {
                                 max-width: 80px;
+                            }
+
+                            @media (max-width: 350px) {
+                                max-width: 60px;
                             }
                         }
                     }

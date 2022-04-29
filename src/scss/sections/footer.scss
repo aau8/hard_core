@@ -1,5 +1,47 @@
 .footer {
+    position: relative;
     background: $frame-light;
+}
+
+// Огонь
+.footer__fire {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    transform: translate(-41%, -100%);
+    width: 545px;
+}
+
+// Вернуться наверх страницы
+.back-to-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 83px;
+    height: 40px;
+    transition: $tr;
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+    }
+
+    &:active {
+        
+        @media (min-width: $min-hover) {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        transform: translate(-50%, -50%) scale(.9);
+    }
+
+    & img {
+        object-fit: cover;
+    }
 }
 
 // Меню

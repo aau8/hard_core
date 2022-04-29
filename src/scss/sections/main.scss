@@ -7,7 +7,9 @@
 .main__bg {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    min-width: 700px;
     width: 100%;
 
     &::before {
@@ -96,7 +98,7 @@
     height: 92px;
 
     @media (max-width: 600px) {
-        width: 270px;
+        width: 270px !important;
         height: 72px;
     }
 }

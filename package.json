@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
-    "prod": "gulp prod --production"
+    "prod": "gulp prod --production",
+    "prod_not_images": "gulp prodNotImages --production"
   },
   "keywords": [],
   "author": "",

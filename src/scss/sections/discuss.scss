@@ -46,6 +46,10 @@
     padding: 30px 0;
     border-bottom: 1px dashed $border-line;
 
+    @media (max-width: $mobile-l) {
+        padding: 24px 0;
+    }
+
     &._not-comments {
 
         & .discuss-row__comments {
@@ -112,8 +116,12 @@
     height: 32px;
     margin-right: 27px;
 
-    @media (max-width: $mobile-l) {
+    @media (max-width: $tablet) {
         margin-right: 16px;
+    }
+
+    @media (max-width: $mobile-l) {
+        margin-right: 12px;
     }
 
     &::before {
@@ -151,8 +159,12 @@
         transition: $tr;
     }
 
-    @media (max-width: $mobile-m) {
+    @media (max-width: $tablet) {
         font-size: 16px;
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: 14px;
     }
 }
 
@@ -161,6 +173,10 @@
     font-size: 14px;
     color: $text-second;
     margin-top: 4px;
+
+    @media (max-width: $mobile-l) {
+        font-size: 12px;
+    }
 }
 
 .discuss-row__comments {
@@ -168,6 +184,10 @@
     white-space: nowrap;
     margin-left: 12px;
     opacity: .9;
+
+    @media (max-width: $mobile-l) {
+        font-size: 12px;
+    }
 
     &::after {
         content: '';
@@ -177,6 +197,12 @@
         background: center/contain no-repeat url('@img/discuss/comments.png');
         vertical-align: middle;
         margin-left: 8px;
+
+        @media (max-width: $mobile-l) {
+            width: 12px;
+            height: 10px;
+            margin-left: 4px;
+        }
     }
 }
 

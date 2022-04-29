@@ -16,7 +16,7 @@
     }
 
     @media (max-width: $mobile-l) {
-        padding: 32px 16px 24px;
+        padding: 32px 0 24px;
     }
 }
 
@@ -52,7 +52,7 @@
     padding: 16px 12px;
 
     @media (max-width: $mobile-m) {
-        flex: 1 0 auto;
+        flex: 1 1 0;
     }
 
     &:hover {
@@ -141,6 +141,10 @@
 .news-row__tag {
     margin: 4px 12px 4px 0;
 
+    @media (max-width: $mobile-l) {
+        font-size: 12px;
+    }
+
     &_orange {
         color: #D47C4A;
     }
@@ -159,6 +163,10 @@
     font-size: 16px;
     transition: $tr;
 
+    @media (max-width: $mobile-l) {
+        font-size: 14px;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -176,6 +184,10 @@
     color: $text-second;
     margin: 0 0 0 auto;
     white-space: nowrap;
+
+    @media (max-width: $mobile-l) {
+        font-size: 12px;
+    }
 }
 
 // Смотреть архив
@@ -198,10 +210,15 @@
 .news__achive-shadow {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 100%;
     height: 110px;
     pointer-events: none;
+
+    @media (max-width: 500px) {
+        width: 110%;
+    }
 
     & img {
         object-fit: cover;
