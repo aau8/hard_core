@@ -98,6 +98,6 @@
     }
 
     &:active {
-        color: brig-color($text-accent, -20%)
+        color: $link-active;
     }
 }

@@ -1,8 +1,7 @@
 
 import { find, findAll, removeAll, bodyLock } from "./utilities/functions.js"
 import './menu.js'
-
-
+import './render.js'
 
 // Функции для модальных окон
 modal()
@@ -109,32 +108,48 @@ function modal() {
 }
 
 // // Табы в карточках в разделе "Топ игроков"
-// tabs()
-// function tabs() {
-//     const tabElems = findAll('.p-tab')
+tabs()
+function tabs() {
+    const tabElems = findAll('[data-tab]')
 
-//     for (let i = 0; i < tabElems.length; i++) {
-//         const tab = tabElems[i];
-//         const btnElems = tab.querySelectorAll('.p-tab__btn')
-//         const tabBodyElems = tab.querySelectorAll('.p-tab__body')
+    for (let i = 0; i < tabElems.length; i++) {
+        const tab = tabElems[i];
+        const btnElems = tab.querySelectorAll('[data-tab-btn]')
+        const allCards = tab.querySelectorAll('[data-tab-card]')
     
-//         for (let i = 0; i < btnElems.length; i++) {
-//             const btn = btnElems[i];
+        for (let i = 0; i < btnElems.length; i++) {
+            const btn = btnElems[i];
             
-//             btn.addEventListener('click', e => {
-//                 const btnData = btn.dataset.tabCat
-//                 const tabBody = tab.querySelector(`.p-tab__body[data-tab-body=${btnData}]`)
+            btn.addEventListener('click', e => {
+                const btnData = btn.dataset.tabBtn
+                const cardElems = tab.querySelectorAll(`[data-tab-card=${btnData}]`)
     
-//                 console.log(btnData)
-//                 removeAll(btnElems, '_active')
-//                 removeAll(tabBodyElems, '_show')
+                removeAll(btnElems, '_active')
+                removeAll(allCards, '_show')
     
-//                 btn.classList.add('_active')
-//                 tabBody.classList.add('_show')
-//             })
-//         }
-//     }
-// }
+                btn.classList.add('_active')
+
+                if (btnData === 'all') {
+                    for (let i = 0; i < allCards.length; i++) {
+                        const card = allCards[i];
+                        
+                        card.classList.add('_show')
+                        console.log(card)
+                    }
+                }
+                else {
+                    for (let i = 0; i < cardElems.length; i++) {
+                        const card = cardElems[i];
+                        
+                        card.classList.add('_show')
+                        console.log(card)
+                    }
+                }
+
+            })
+        }
+    }
+}
 
 // // Показывает стрелку "наверх" при скролле, равному высоте экрана
 // find('.btt__button').addEventListener('click', e => {

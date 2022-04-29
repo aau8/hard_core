@@ -144,6 +144,13 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <tr class="row-empty">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
                                         <tr>
                                             <td>1</td>
                                             <td>
@@ -246,6 +253,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                <div class="rating-hover"><img src="@img/rating/hover.png" alt=""></div>
                             </div>
                             <div class="rating__wood-board-top"><img src="@img/rating/wood-board-top.png" alt=""></div>
                             <div class="rating__paper"><img src="@img/rating/paper.png" alt=""></div>
@@ -253,31 +261,31 @@
                         </section>
                     </div>
                     <div class="content-right">
-                        <section class="news">
+                        <section class="news" data-tab>
                             <div class="news__header">
                                 <h2 class="news__title">Новости</h2>
                                 <div class="news__tabs">
-                                    <button class="news__tab _active">Все</button>
-                                    <button class="news__tab">Обновления</button>
-                                    <button class="news__tab">События</button>
+                                    <button class="news__tab _active" data-tab-btn="all">Все</button>
+                                    <button class="news__tab" data-tab-btn="updates">Обновления</button>
+                                    <button class="news__tab" data-tab-btn="events">События</button>
                                 </div>
                             </div>
                             <div class="news__body">
-                                <a href="#" class="news-row">
+                                <a href="#" class="news-row _show" data-tab-card="news">
                                     <div class="news-row__content">
                                         <span class="news-row__tag news-row__tag_orange square-brackets">Новости</span>
                                         <h3 class="news-row__title">Запуск сервера в декабре!</h3>
                                     </div>
                                     <span class="news-row__date">22 / ноября</span>
                                 </a>
-                                <a href="#" class="news-row">
+                                <a href="#" class="news-row _show" data-tab-card="updates">
                                     <div class="news-row__content">
                                         <span class="news-row__tag news-row__tag_blue square-brackets">Обновления</span>
                                         <h3 class="news-row__title">Добавлен новый герой</h3>
                                     </div>
                                     <span class="news-row__date">10 / ноября</span>
                                 </a>
-                                <a href="#" class="news-row">
+                                <a href="#" class="news-row _show" data-tab-card="events">
                                     <div class="news-row__content">
                                         <span class="news-row__tag news-row__tag_purple square-brackets">События</span>
                                         <h3 class="news-row__title">Адский Halloween!</h3>
@@ -323,31 +331,31 @@
                                     <div class="discuss-row__content">
                                         <div class="discuss-row__avatar"><img src="@img/discuss/avatar.png" alt=""></div>
                                         <div class="discuss-row__info">
-                                            <h3 class="discuss-row__title">Новый сервер Х000 ОТБ!</h3>
-                                            <span class="discuss-row__date">Сегодня, 21:45</span>
+                                            <h3 class="discuss-row__title">Зимний сезон - список победителей!</h3>
+                                            <span class="discuss-row__date">31 / октября, 21:45</span>
                                         </div>
                                     </div>
-                                    <span class="discuss-row__comments">0</span>
+                                    <span class="discuss-row__comments">267</span>
                                 </a>
                                 <a href="#" class="discuss-row">
                                     <div class="discuss-row__content">
                                         <div class="discuss-row__avatar"><img src="@img/discuss/avatar.png" alt=""></div>
                                         <div class="discuss-row__info">
-                                            <h3 class="discuss-row__title">Новый сервер Х000 ОТБ!</h3>
-                                            <span class="discuss-row__date">Сегодня, 21:45</span>
+                                            <h3 class="discuss-row__title">ММОТОП. Голосуй уже сейчас!</h3>
+                                            <span class="discuss-row__date">28 / октября, 10:33</span>
                                         </div>
                                     </div>
-                                    <span class="discuss-row__comments">0</span>
+                                    <span class="discuss-row__comments">1 948</span>
                                 </a>
                                 <a href="#" class="discuss-row">
                                     <div class="discuss-row__content">
                                         <div class="discuss-row__avatar"><img src="@img/discuss/avatar.png" alt=""></div>
                                         <div class="discuss-row__info">
-                                            <h3 class="discuss-row__title">Новый сервер Х000 ОТБ!</h3>
-                                            <span class="discuss-row__date">Сегодня, 21:45</span>
+                                            <h3 class="discuss-row__title">Как мне поменять своего персонажа?</h3>
+                                            <span class="discuss-row__date">17 / октября, 16:01</span>
                                         </div>
                                     </div>
-                                    <span class="discuss-row__comments">0</span>
+                                    <span class="discuss-row__comments">34</span>
                                 </a>
                             </div>
                             <div class="discuss__footer">
@@ -400,6 +408,7 @@
                             <a href="#" class="footer__social"><img src="@img/socials/youtube.png" alt=""></a>
                             <a href="#" class="footer__social"><img src="@img/socials/discord.png" alt=""></a>
                         </div>
+                        <a href="#" class="footer__signa"><img src="@img/signa.png" alt=""></a>
                     </div>
                 </div>
             </div>

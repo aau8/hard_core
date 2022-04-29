@@ -16,12 +16,15 @@ export default function imagesBuild () {
             })
         ))
         .pipe(newer(app.path.build.images))
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{ removeViewBox: false }],
-            interlaced: true,
-            optimizationLevel: 3
-        }))
+        .pipe(app.plugins.if(
+            app.isProd,
+            imagemin({
+                progressive: true,
+                svgoPlugins: [{ removeViewBox: false }],
+                interlaced: true,
+                optimizationLevel: 3
+            })
+        ))
         .pipe(gulp.dest(app.path.build.images))
         .pipe(browserSync.reload({ stream: true }));
 }

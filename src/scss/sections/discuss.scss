@@ -39,6 +39,7 @@
 
 // Строка
 .discuss-row {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,11 +52,58 @@
             opacity: .4;
         }
     }
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            
+            & .discuss-row__content {
+                transform: translate(20px, 0);
+            }
+            
+            & .discuss-row__title {
+                color: $text-accent;
+                text-shadow: 0 0 13px #bc5026;
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &:active {
+        
+        & .discuss-row__title {
+            color: $link-active;
+
+            &::before {
+                background: $link-active;
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: center/cover no-repeat url('@img/discuss/fire-card.png'); 
+        opacity: 0;
+        transition: $tr;
+    }
 }
 
 .discuss-row__content {
     display: flex;
     align-items: center;
+    transition: $tr;
 }
 
 .discuss-row__avatar {
@@ -86,7 +134,22 @@
 }
 
 .discuss-row__title {
+    position: relative;
     font-size: 18px;
+    opacity: .9;
+    transition: $tr;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $text-accent;
+        opacity: 0;
+        transition: $tr;
+    }
 
     @media (max-width: $mobile-m) {
         font-size: 16px;
@@ -101,8 +164,10 @@
 }
 
 .discuss-row__comments {
+    color: #C1C2C2;
     white-space: nowrap;
     margin-left: 12px;
+    opacity: .9;
 
     &::after {
         content: '';

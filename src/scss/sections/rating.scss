@@ -47,8 +47,12 @@
     color: $text-dark;
     padding: 36px 20px;
 
+    @media (max-width: 860px) {
+        padding: 36px 48px;
+    }
+
     @media (max-width: 450px) {
-        padding: 24px 0;
+        padding: 24px 16px;
     }
 }
 
@@ -59,8 +63,14 @@
 }
 
 .rating__table {
+    max-width: 496px;
     width: 100%;
-    margin-top: 27px;
+    border-collapse: collapse;
+    margin: 27px auto 0;
+
+    @media (max-width: 860px) {
+        max-width: none;
+    }
 
     & thead {
         
@@ -68,26 +78,26 @@
             
             & td {
                 padding-bottom: 10px;
-                border-bottom: 1px dashed $text-dark;
+                border-bottom: 1px dashed #867F78;
 
                 @media (max-width: $laptop) {
                     font-size: 12px;
                 }
 
                 &:first-child {
-                    padding-left: 30px;
+                    // padding-left: 30px;
 
-                    @media (max-width: $laptop) {
-                        padding-left: 16px;
-                    }
+                    // @media (max-width: $laptop) {
+                    //     padding-left: 16px;
+                    // }
                 }
 
                 &:last-child {
-                    padding-right: 30px;
+                    // padding-right: 30px;
 
-                    @media (max-width: $laptop) {
-                        padding-right: 16px;
-                    }
+                    // @media (max-width: $laptop) {
+                    //     padding-right: 16px;
+                    // }
                 }
 
                 &:nth-child(2) {
@@ -103,6 +113,7 @@
     }
     
     & tbody {
+        position: relative;
         font-size: 16px;
         padding-top: 15px;
 
@@ -115,11 +126,13 @@
         }
         
         & tr {
+            position: relative;
+            z-index: 1;
 
             &:first-child {
 
                 & td {
-                    padding-top: 30px;
+                    padding: 7.5px;
                 }
             }
             
@@ -131,19 +144,19 @@
                 }
 
                 &:first-child {
-                    padding-left: 30px;
+                    // padding-left: 30px;
 
-                    @media (max-width: $laptop) {
-                        padding-left: 16px;
-                    }
+                    // @media (max-width: $laptop) {
+                    //     padding-left: 16px;
+                    // }
                 }
 
                 &:last-child {
-                    padding-right: 30px;
+                    // padding-right: 30px;
 
-                    @media (max-width: $laptop) {
-                        padding-right: 16px;
-                    }
+                    // @media (max-width: $laptop) {
+                    //     padding-right: 16px;
+                    // }
                 }
 
                 &:nth-child(2) {
@@ -220,5 +233,37 @@
                 }
             }
         }
+    }
+}
+
+.rating-hover {
+    display: none;
+    position: absolute;
+    // z-index: -1;
+    top: 0;
+    // bottom: 0;
+    // left: 0;
+    left: 50%;
+    transform: translate(-50%, -16%);
+    // transform: translate(0, -16%);
+    width: 100%;
+    // height: 65px;
+    height: 105px;
+    pointer-events: none;
+
+    @media (max-width: 1200px) {
+        width: 104%;
+    }
+
+    @media (max-width: 390px) {
+        height: 85px;
+    }
+
+    & img {
+        object-fit: fill;
+    }
+
+    &._show {
+        display: block;
     }
 }

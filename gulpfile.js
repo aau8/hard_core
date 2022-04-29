@@ -9,9 +9,14 @@ import imagesBuild from './gulp/tasks/images.js'
 const { series, parallel, src, dest, watch } = gulp
 
 import path from './gulp/config/path.js'
+import plugins from './gulp/config/plugins.js'
+
 global.app = {
+    isProd: process.argv.includes('--production'),
+    isDev: !process.argv.includes('--production'),
     path,
-    gulp
+    gulp,
+    plugins
 }
 
 function webServer() {
@@ -26,22 +31,35 @@ function webServer() {
 }
 
 function watchFiles() {
-    watch(app.path.src.html, htmlBuild);
-    watch(app.path.src.scss, cssBuild);
-    watch(app.path.src.js, jsBuild);
-    watch(app.path.src.images, imagesBuild);
+    watch(app.path.watch.html, htmlBuild);
+    watch(app.path.watch.scss, cssBuild);
+    watch(app.path.watch.js, jsBuild);
+    watch(app.path.watch.images, imagesBuild);
 }
 
 async function cleanDist() {
     await del(`./dist`);
 }
 
-let dev = series(
-    cleanDist,
+const tasks = series(
     htmlBuild,
     cssBuild,
     jsBuild,
     imagesBuild
-);
+)
 
-export default parallel(dev, watchFiles, webServer)
+export const dev = series(
+    cleanDist,
+    tasks,
+    gulp.parallel(
+        watchFiles, 
+        webServer
+    )
+);  
+
+export const prod = series(
+    cleanDist,
+    tasks,
+)
+
+gulp.task('default', dev)

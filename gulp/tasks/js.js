@@ -10,7 +10,7 @@ import webpack from 'webpack-stream';
 
 export default function jsBuild () {
     del('./dist/js/**/*.js');
-    return gulp.src(app.path.src.js, {sourcemaps: true})
+    return gulp.src(app.path.src.js, {sourcemaps: app.isDev})
         .pipe(plumber(
             notify.onError({
                 title: 'JS',
@@ -18,7 +18,7 @@ export default function jsBuild () {
             })
         ))
         .pipe(webpack({
-            mode: 'development',
+            mode: app.isDev ? 'development' : 'production',
             output: {
                 filename: 'bundle.min.js',
             },

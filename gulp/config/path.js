@@ -10,6 +10,7 @@ export default {
         css: `${buildFolder}/css/`,
         html: `${buildFolder}/`,
         images: `${buildFolder}/img/`,
+        fonts: `${buildFolder}/fonts/`,
         files: `${buildFolder}/files/`
     },
 
@@ -18,6 +19,7 @@ export default {
         scss: `${srcFolder}/scss/style.scss`,
         html: `${srcFolder}/*.html`,
         images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+        fonts: `${buildFolder}/fonts/`,
         svg: `${srcFolder}/img/**/*.svg`,
         files: `${srcFolder}/files/**/*.*`
     },
