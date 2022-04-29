@@ -1,7 +1,7 @@
-@import '_mixins'; // Миксины
-@import '_fonts'; // Шрифты
-@import '_vars'; // Переменные
-@import '_reset'; // Сброс css
+@import 'mixins'; // Миксины
+@import 'fonts'; // Шрифты
+@import 'vars'; // Переменные
+@import 'reset'; // Сброс css
 
 
 // Общие стили для страниц
@@ -16,10 +16,11 @@ html {
 body {
     font-family: $ff-main;
     color: $text-primary;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 400;
     font-style: normal;
     line-height: 1.2;
+    background: #080A0A;
 
     &._lock {
         overflow: hidden;
@@ -36,30 +37,63 @@ body {
 
     & > .content {
         flex: 1 0 auto;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        margin-top: 50px;
     }
 }
 
-@import '_grid'; // Сетка
+.content__wrap {
+    display: flex;
+
+    @media (max-width: 860px) {
+        flex-direction: column;
+    }
+}
+
+.content-left,
+.content-right {
+    width: 50%;
+
+    @media (max-width: 860px) {
+        width: 100%;
+    }
+}
+
+.content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@import 'grid'; // Сетка
 
 // Анимация
-@import './_animation';
+@import './animation';
 
 // Компоненты
-@import './components/_buttons';
 // @import './components/_forms';
 // @import './components/_modal';
  
 // Текстовые компоненты
-@import './components/text/_text';
-@import './components/text/_titles';
+@import './components/text/text';
+@import './components/text/titles';
+
+// Элементы
+@import './elements/buttons';
+
+// Спрайты
+@import './sprites/general';
+@import './sprites/locks';
+
 
 // Секции
-@import './sections/_header';
-@import './sections/_main';
-@import './sections/_footer';
-
-
-
-.block {
-    background: green;
-}
+@import './sections/header';
+@import './sections/main';
+@import './sections/ideal-world';
+@import './sections/rating';
+@import './sections/news';
+@import './sections/contacts';
+@import './sections/discuss';
+@import './sections/footer';

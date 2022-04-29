@@ -1,0 +1,155 @@
+.news {
+    position: relative;
+    width: 100%;
+    background: rgba(7, 6, 5, 0.95);
+    margin-top: 10px;
+    padding: 24px 54px 26px;
+
+    @media (max-width: $laptop) {
+        padding: 32px 32px 24px;
+    }
+
+    @media (max-width: $mobile-l) {
+        padding: 32px 16px 24px;
+    }
+}
+
+// Шапка
+.news__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    // padding-bottom: 18px;
+    border-bottom: 1px solid $border-line;
+}
+
+.news__title {
+    font-size: 24px;
+    margin-right: 16px;
+}
+
+// Табы
+.news__tabs {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 auto;
+
+    @media (max-width: $mobile-m) {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.news__tab {
+    position: relative;
+    color: $text-second;
+    padding: 16px 12px;
+
+    @media (max-width: $mobile-m) {
+        flex: 1 0 auto;
+    }
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            color: $text-primary;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: calc(100% - 24px);
+        height: 1px;
+        background: $text-accent;
+        opacity: 0;
+        transition: $tr;
+    }
+
+    &._active {
+        color: $text-primary;
+    
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+// Тело
+.news__body {
+
+}
+
+// Строка
+.news-row {
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px dashed $border-line;
+}
+
+.news-row__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.news-row__tag {
+    margin: 4px 12px 4px 0;
+
+    &_orange {
+        color: #D47C4A;
+    }
+
+    &_blue {
+        color: #5CBFB7;
+    }
+
+    &_purple {
+        color: #BF5CA2;
+    }
+}
+
+.news-row__title {
+    font-size: 16px;
+}
+
+.news-row__date {
+    color: $text-second;
+    margin: 0 0 0 auto;
+    white-space: nowrap;
+}
+
+// Смотреть архив
+.news__achive {
+    display: block;
+    color: $text-second;
+    text-align: center;
+    padding: 6px 0;
+    margin-top: 20px;
+    transition: $tr;
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            color: $text-primary;
+        }
+    }
+}
+
+.news__achive-shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    pointer-events: none;
+
+    & img {
+        object-fit: cover;
+    }
+}

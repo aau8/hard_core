@@ -1,0 +1,14 @@
+.square-brackets {
+
+    &::before {
+        content: '[';
+        color: inherit;
+        margin-right: 4px;
+    }
+
+    &::after {
+        content: ']';
+        color: inherit;
+        margin-left: 4px;
+    }
+}

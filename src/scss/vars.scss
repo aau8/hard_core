@@ -1,0 +1,71 @@
+// ================ Colors Start ================
+// Текст
+$text-primary: #fff;
+$text-second: #868178;
+$text-dark: #070605;
+$text-accent: #FFCD6D;
+
+// $text-gray-light: #A3AAC0;
+// $text-light: #fff;
+// $text-light-second: rgba(255, 255, 255, 0.5);
+// $text-dark: #333;
+
+
+
+// Линии интерфейса
+$interface-dark: #454352;
+$interface-gray-dark: #0E1010;
+$interface-gray-light: #121414;
+
+// Задний фон разделов
+$frame-dark: #080A0A;
+$frame-light: #0E1010;
+
+// Обводка
+$border-line: #272828;
+// $border-light: rgba(255, 255, 255, 0.2);
+// $border-dark: rgba(163, 170, 192, 0.5);
+// $border-conception: #F5F9FD;
+// $border-conception-line: #EDEFF3;
+// $border-textfield: #D0D4DF;
+
+$error: #EB5757;
+
+// Цвета кнопок в файле 'scss/elements/button.scss'
+// ================ Colors End ================
+
+
+// ================ Shadow Start ================
+$shadow-orange: 0px 43px 80px rgba(3, 8, 17, 0.04), 0px 17.9644px 33.4221px rgba(3, 8, 17, 0.0287542), 0px 9.60461px 17.869px rgba(3, 8, 17, 0.0238443), 0px 5.38427px 10.0172px rgba(3, 8, 17, 0.02), 0px 2.85954px 5.32008px rgba(3, 8, 17, 0.0161557), 0px 1.18992px 2.21381px rgba(3, 8, 17, 0.0112458);
+$shadow-blue: 0px 15px 30px rgba(44, 103, 144, 0.09);
+$shadow-gray: 0px 8px 16px rgba(34, 19, 77, 0.07);
+$shadow-conception: 0px 15px 30px rgba(44, 103, 144, 0.09);
+// ================ Shadow End ================
+
+
+// ================ Radius Start ================
+$radius-l: 32px;
+$radius-m: 16px;
+$radius-s: 8px;
+$radius-round: 200px;
+// ================ Radius End ================
+
+
+// ================ Responsive Start ================
+$laptop-l: 1440px;
+$laptop: 1024px;
+$tablet: 768px;
+$mobile-l: 425px;
+$mobile-m: 375px;
+$mobile-s: 320px;
+// ================ Responsive End ================
+
+
+// Размеры контейнера в этом файле 'scss/grid.scss'
+
+
+// ================ Other Start ================
+$ff-main: 'PT Serif', serif;
+$tr: .3s;
+$min-hover: 769px; // Минимальное разрешения экрана для hover-эффекта
+// ================ Other End ================

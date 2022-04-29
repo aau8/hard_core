@@ -1,19 +1,8 @@
-import 'bulma/sass/grid/_all.sass' // Сеточная система бибилотеки Bulma
-import '../scss/style.scss'
+
 import { find, findAll, removeAll, bodyLock } from "./utilities/functions.js"
-// import './sliders.js'
+import './menu.js'
 
-// Мобильное меню
-(function menu() {
-	const burger = find('.burger')
-	const menu = find('.menu');
 
-	burger.addEventListener('click', (e) => {
-		burger.classList.toggle('burger_close')
-		menu.classList.toggle('_show')
-		bodyLock()
-	})
-})
 
 // Функции для модальных окон
 modal()

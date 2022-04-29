@@ -1,0 +1,132 @@
+.footer {
+    background: $frame-light;
+}
+
+// Меню
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    padding: 57px 0;
+    border-bottom: 1px solid $border-line;
+}
+
+.footer-menu__list {
+    // flex-direction: row;
+
+    & li {
+
+        &:first-child {
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &:last-child {
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+// Копирайт
+.footer-copyright {
+    padding: 60px 0;
+
+    @media (max-width: $tablet) {
+        padding: 40px 0;
+    }
+}
+
+.footer-copyright__content {
+    display: flex;
+    align-items: center;
+}
+
+.footer-copyright__icon {
+    min-width: 45px;
+    width: 45px;
+    height: 45px;
+    margin-right: 26px;
+}
+
+.footer-copyright__text {
+    color: $text-second;
+}
+
+// Нижний раздел подвала
+.footer-down {
+    background: #121414;
+    padding: 40px 0;
+}
+
+.footer-down__wrap {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $tablet) {
+        flex-direction: column-reverse;
+    }
+}
+
+.footer__docs {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $tablet) {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.footer__doc {
+    color: $text-second;
+
+    @media (max-width: $tablet) {
+        margin: 8px;
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 22px;
+        width: 1px;
+        background: $text-second;
+        vertical-align: middle;
+        margin: 0 40px;
+        pointer-events: none;
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+}
+
+.footer__socials {
+    display: flex;
+    align-items: center;
+}
+
+.footer__social {
+    width: 18px;
+    height: 18px;
+    opacity: .2;
+    transition: $tr;
+
+    @media (max-width: $tablet) {
+        margin-bottom: 12px;
+    }
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            opacity: 1;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}

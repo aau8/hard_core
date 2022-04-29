@@ -1,0 +1,83 @@
+.section {
+    margin: 37px 0;
+
+    @media (max-width: $tablet) {
+        margin: 50px 0;
+    }
+}
+
+// Шапка разделов (section)
+.s-header {
+    margin-bottom: 30px;
+}
+
+.s-header__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.s-title {
+    display: flex;
+    align-items: center;
+
+    &_left {
+        flex-direction: row;
+
+        & .s-title__arrow {
+            margin-left: 20px;
+            transform: rotate(180deg);
+
+            @media (max-width: $tablet) {
+                margin-left: 10px;
+            }
+        }
+    }
+    
+    &_right {
+        flex-direction: row-reverse;
+        text-align: right;
+
+        @media (max-width: 600px) {
+            display: none;
+        }
+        
+        & .s-title__arrow {
+            margin-right: 20px;
+            transform: rotate(0);
+
+            @media (max-width: $tablet) {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.s-title__text {
+    font-size: 24px;
+    font-weight: 700;
+    color: $section-title-color;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    @media (max-width: $laptop) {
+        font-size: 20px;
+    }
+
+    @media (max-width: $tablet) {
+        // font-size: 18px;
+    }
+}
+
+.s-title__arrow {
+    max-width: 115px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    pointer-events: none;
+    user-select: none;
+
+    @media (max-width: $tablet) {
+        max-width: 90px;
+    }
+}

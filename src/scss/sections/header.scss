@@ -1,0 +1,553 @@
+$hide-menu: 920px;
+
+.header {
+    max-height: 70px;
+    background: $frame-dark;
+    box-shadow: 0 0 18px rgba(0,0,0,.99);
+    overflow: hidden;
+    transition: $tr;
+
+    @media (max-width: 500px) {
+        max-height: 60px;
+    }
+}
+
+.header__wrap {
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 500px) {
+        height: 60px;
+    }
+}
+
+.header__logo {
+    position: relative;
+    width: 90px;
+    height: 100%;
+
+    & img {
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(calc(-50% + 20px), -50%);
+        // width: auto;
+        // height: 100%;
+        // pointer-events: none;
+        
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(calc(-50% + 20px), 0);
+        width: auto;
+        height: 150%;
+        pointer-events: none;
+    }
+}
+
+.menu {
+
+    @media (max-width: $hide-menu) {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        width: 100%;
+        padding: 24px 0;
+        // border-top: 1px solid $border-line;
+    }
+}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+    
+    @media (max-width: $hide-menu) {
+        flex-direction: column;
+        // padding: 20px 0;
+    }
+
+    & li {
+        white-space: nowrap;
+
+        & a {
+            font-size: 13px;
+            text-transform: uppercase;
+
+            @media (max-width: 970px) {
+                font-size: 12px;
+            }
+            
+            @media (max-width: $hide-menu) {
+                width: 100%;
+                text-align: center;
+                padding: 12px 0;
+            }
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background: center/contain no-repeat url('@img/bullet-menu.png');
+            vertical-align: middle;
+            margin: 0 30px;
+
+            @media (max-width: 1100px) {
+                margin: 0 16px;
+            }
+
+            @media (max-width: $hide-menu) {
+                margin: 0;
+            }
+        }
+
+        &:last-child {
+            
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                background: center/contain no-repeat url('@img/bullet-menu.png');
+                vertical-align: middle;
+                margin-left: 30px;
+
+                @media (max-width: 1070px) {
+                    margin-left: 16px;
+                }
+
+                @media (max-width: $hide-menu) {
+                    display: none;
+                }
+            }
+        }
+
+        &:first-child {
+
+            &::before {
+                
+                @media (max-width: $hide-menu) {
+                    display: none;
+                }
+            }
+        }
+
+        @media (max-width: $hide-menu) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.menu-auth {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.menu-auth_desktop {
+
+    @media (max-width: 500px) {
+        
+        & .menu-si {
+            display: none;
+        }
+    }
+
+    @media (max-width: $mobile-m) {
+
+        & .menu-su {
+            display: none;
+        }
+    }
+}
+
+.menu-auth_mobile {
+    display: none;
+
+    @media (max-width: 500px) {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+
+        & .menu-su {
+            display: none;
+        }
+    }
+
+    @media (max-width: $mobile-m) {
+
+        & > button {
+            margin: 8px 4px;
+        }
+
+        & .menu-su {
+            display: block;
+        }
+    }
+}
+
+// Кнопка Входа
+.menu-si {
+    display: flex;
+    align-items: center;
+    margin-right: 18px;
+
+    @media (max-width: $tablet) {
+        margin-right: 12px;
+    }
+
+    @media (max-width: 500px) {
+        // display: none;
+    }
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+
+            & .icon-lock {
+                animation: iconLock .5s linear;
+            }
+
+            @keyframes iconLock {
+                0% {
+                    transform: translate(-50%, -50%) rotate(0);
+                }
+                25% {
+                    transform: translate(-50%, -50%) rotate(-30deg);
+                }
+                50% {
+                    transform: translate(-50%, -50%) rotate(20deg);
+                }
+                75% {
+                    transform: translate(-50%, -50%) rotate(-10deg);
+                }
+                100% {
+                    transform: translate(-50%, -50%) rotate(0);
+                }
+
+            }
+            
+            & .menu-si__text {
+                color: $text-accent;
+                text-shadow: 0 0 13px #bc5026;
+            }
+        }
+    }
+
+    &:active {
+
+        & .menu-si__text {
+            color: brig-color($text-accent, -20%);
+            text-shadow: 0 0 13px #bc5026;
+        }
+    }
+}
+
+.menu-si__icon {
+    position: relative;
+    width: 60px;
+    height: 32px;
+    display: block;
+}
+
+.icon-lock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: $tr;
+}
+
+.menu-si__text {
+    font-size: 11px;
+    color: $text-second;
+    text-transform: uppercase;
+    transition: $tr;
+
+    @media (max-width: $mobile-m) {
+        margin-left: -5px;
+        white-space: nowrap;
+    }
+}
+
+// Кнопка регистрации
+.menu-su {
+//     position: relative;
+    width: 188px;
+    height: 36px;
+//     transition: $tr;
+
+//     @media (max-width: $mobile-m) {
+//         width: 168px;
+//     }
+
+//     &:hover {
+        
+//         @media (min-width: $min-hover) {
+//             transform: scale(1.05);
+
+//             & .menu-su__text {
+//                 letter-spacing: .1em;
+//             }
+//         }
+//     }
+
+//     &:active {
+//         @media (min-width: $min-hover) {
+//             transform: scale(1);
+
+//             & .menu-su__text {
+//                 letter-spacing: .05em;
+//             }
+//         }
+        
+//         transform: scale(0.95);
+
+//         & .menu-su__text {
+//             letter-spacing: .03em;
+
+//         }
+//     }
+}
+
+.menu-su__bg {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100%;
+    // background: center/100% 60px no-repeat url('@img/buttons/btn-header-green.png');
+    background: center/100% 60px no-repeat url('@img/buttons/btn-header-green.png');
+}
+
+.menu-su__text {
+    // position: relative;
+    // z-index: 1;
+    // display: block;
+    // text-transform: uppercase;
+    font-size: 11px;
+    // text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.7);
+    // letter-spacing: 0.1em;
+    // user-select: none;
+    // transition: $tr;
+
+    // @media (min-width: $min-hover) {
+    //     letter-spacing: 0.05em;
+    // }
+}
+
+// Бургер
+.burger {
+    display: none;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+
+    @media (max-width: $hide-menu) {
+        display: block;
+    }
+
+    &._deactive {
+
+    }
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            
+            & span {
+                // background: $text-accent;
+
+                &:nth-child(1) {
+                    // left: 0;
+                    // width: 80%;
+                    transform: translate(-50%, calc(-50% - 7px));
+                    animation: burgerLineHover .5s linear infinite;
+                }
+
+                &:nth-child(2) {
+                    transform: translate(-50%, -50%);
+                    animation: burgerLineHover .5s .03s linear infinite;
+                }
+
+                &:nth-child(3) {
+                    // left: auto;
+                    // right: 0;
+                    // width: 80%;
+                    transform: translate(-50%, calc(-50% + 7px));
+                    animation: burgerLineHover .5s .06s linear infinite;
+                }
+            }
+
+            @keyframes burgerLineHover {
+                0% {
+                    left: 50%;
+                }
+                25% {
+                    left: calc(50% + 1px);
+                }
+                50% {
+                    left: calc(50% - 1px);
+                }
+                75% {
+                    left: calc(50% + 1px);
+                }
+                100% {
+                    left: 50%;
+                }
+            }
+        }
+    }
+
+    & span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: 2px;
+        background: #fff;
+        transition: $tr;
+
+        &:nth-child(1) {
+            width: 50%;
+            transform: translate(-50%, calc(-50% - 6px));
+        }
+
+        &:nth-child(2) {
+            transform: translate(-50%, -50%);
+        }
+
+        &:nth-child(3) {
+            width: 50%;
+            transform: translate(-50%, calc(-50% + 6px));
+        }
+    }
+
+    &._activeAnim {
+
+        & span {
+
+            &:nth-child(1) {
+                animation: activeSpan1 .3s linear forwards;
+            }
+
+            &:nth-child(2) {
+                animation: activeSpan2 .3s linear forwards;
+            }
+
+            &:nth-child(3) {
+                animation: activeSpan3 .3s linear forwards;
+            }
+        }
+    }
+
+    &._active {
+
+        & span {
+
+            &:nth-child(1) {
+                width: 80%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                width: 80%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+
+        &._deactiveAnim {
+
+            & span {
+
+                &:nth-child(1) {
+                    animation: activeSpan1 .3s linear forwards reverse;
+                }
+
+                &:nth-child(2) {
+                    animation: activeSpan2 .3s linear forwards reverse;                    
+                }
+
+                &:nth-child(3) {
+                    animation: activeSpan3 .3s linear forwards reverse;
+                }
+            }
+        }
+    }
+
+    @keyframes activeSpan1 {
+        0% {
+            transform: translate(-50%, calc(-50% - 6px));
+            width: 50%;
+        }
+        20% {
+            transform: translate(-50%, -50%);
+            width: 50%;
+        }
+        50% {
+            transform: translate(-50%, -50%) rotate(0);
+            width: 1px;
+        }
+        51% {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        100% {
+            width: 80%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    @keyframes activeSpan2 {
+        0% {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+        20% {
+            transform: translate(-50%, -50%);
+            width: 80%;
+        }
+        50% {
+            width: 1px;
+            opacity: 1;
+        }
+        51% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes activeSpan3 {
+        0% {
+            transform: translate(-50%, calc(-50% + 6px));
+            width: 50%;
+        }
+        20% {
+            transform: translate(-50%, -50%);
+            width: 50%;
+        }
+        50% {
+            transform: translate(-50%, -50%) rotate(0);
+            width: 1px;
+        }
+        51% {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        100% {
+            width: 80%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+}

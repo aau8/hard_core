@@ -1,0 +1,139 @@
+.discuss {
+    max-width: 546px;
+    width: 100%;
+    margin-top: 55px;
+
+    @media (max-width: 860px) {
+        // margin: 40px auto 0 auto;
+        max-width: none;
+    }
+}
+
+.discuss__header {
+    display: flex;
+    align-items: center;
+}
+
+.discuss__section-arrow {
+    position: relative;
+    width: 100%;
+    height: 30px;
+
+    & img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        object-position: right;
+    }
+}
+
+.discuss__title {
+    font-size: 24px;
+    margin: 0 16px;
+}
+
+// Тело
+.discuss__body {
+
+}
+
+// Строка
+.discuss-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 1px dashed $border-line;
+
+    &._not-comments {
+
+        & .discuss-row__comments {
+            opacity: .4;
+        }
+    }
+}
+
+.discuss-row__content {
+    display: flex;
+    align-items: center;
+}
+
+.discuss-row__avatar {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin-right: 27px;
+
+    @media (max-width: $mobile-l) {
+        margin-right: 16px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 140%;
+        height: 140%;
+        background: center/contain no-repeat url('@img/discuss/avatar-bg.png');
+    }
+}
+
+.discuss-row__info {
+
+}
+
+.discuss-row__title {
+    font-size: 18px;
+
+    @media (max-width: $mobile-m) {
+        font-size: 16px;
+    }
+}
+
+.discuss-row__date {
+    display: inline-block;
+    font-size: 14px;
+    color: $text-second;
+    margin-top: 4px;
+}
+
+.discuss-row__comments {
+    white-space: nowrap;
+    margin-left: 12px;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 12px;
+        background: center/contain no-repeat url('@img/discuss/comments.png');
+        vertical-align: middle;
+        margin-left: 8px;
+    }
+}
+
+// Подвал раздела
+.discuss__footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.discuss-forum {
+    min-width: 175px;
+    width: 175px;
+    height: 40px;
+    display: block;
+}
+
+.discuss-forum__bg {
+    background: center/100% 60px no-repeat url('@img/buttons/forum.png');
+}
+
+discuss-forum__text {
+    font-size: 11px;
+}
