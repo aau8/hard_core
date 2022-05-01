@@ -25,7 +25,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    // padding-bottom: 18px;
     border-bottom: 1px solid $border-line;
 }
 
@@ -36,6 +35,7 @@
 
 // Табы
 .news__tabs {
+    position: relative;
     display: flex;
     align-items: center;
     margin: 0 0 0 auto;
@@ -56,7 +56,7 @@
     }
 
     &:hover {
-        
+
         @media (min-width: $min-hover) {
             color: $text-primary;
         }
@@ -66,18 +66,18 @@
         color: $text-primary;
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: calc(100% - 24px);
-        height: 1px;
-        background: $text-accent;
-        opacity: 0;
-        transition: $tr;
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 50%;
+    //     transform: translate(-50%, 0);
+    //     width: calc(100% - 24px);
+    //     height: 1px;
+    //     background: $text-accent;
+    //     opacity: 0;
+    //     transition: $tr;
+    // }
 
     &._active {
         color: $text-primary;
@@ -86,6 +86,17 @@
             opacity: 1;
         }
     }
+}
+
+.news__tabs-roller {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 21px;
+    height: 1px;
+    background: $text-accent;
+    border-radius: 12px;
+    transition: $tr;
 }
 
 // Тело

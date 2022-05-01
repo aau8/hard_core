@@ -1,13 +1,11 @@
-@import 'mixins'; // Миксины
-@import 'fonts'; // Шрифты
-@import 'vars'; // Переменные
-@import 'reset'; // Сброс css
-
+@import "mixins"; // Миксины
+@import "fonts"; // Шрифты
+@import "vars"; // Переменные
+@import "reset"; // Сброс css
 
 // Общие стили для страниц
 // @include selection {} // Стиль выделения элементов на странице
 // @include scrollbar(); // Стиль скроллбара
-
 
 html {
     scroll-behavior: smooth;
@@ -20,7 +18,7 @@ body {
     font-weight: 400;
     font-style: normal;
     line-height: 1.2;
-    background: #080A0A;
+    background: #080a0a;
 
     &._lock {
         overflow: hidden;
@@ -80,33 +78,34 @@ body {
     }
 }
 
-@import 'grid'; // Сетка
+@import "grid"; // Сетка
 
 // Анимация
-@import './animation';
+@import "./animation";
+
+// Элементы
+@import "./elements/buttons";
+@import "./elements/textfield";
 
 // Компоненты
 // @import './components/_forms';
-// @import './components/_modal';
- 
-// Текстовые компоненты
-@import './components/text/text';
-@import './components/text/titles';
+@import "./components/modals/modal";
+@import "./components/modals/modal-si";
 
-// Элементы
-@import './elements/buttons';
+// Текстовые компоненты
+@import "./components/text/text";
+@import "./components/text/titles";
 
 // Спрайты
-@import './sprites/general';
-@import './sprites/locks';
-
+@import "./sprites/general";
+@import "./sprites/locks";
 
 // Секции
-@import './sections/header';
-@import './sections/main';
-@import './sections/ideal-world';
-@import './sections/rating';
-@import './sections/news';
-@import './sections/contacts';
-@import './sections/discuss';
-@import './sections/footer';
+@import "./sections/header";
+@import "./sections/main";
+@import "./sections/ideal-world";
+@import "./sections/rating";
+@import "./sections/news";
+@import "./sections/contacts";
+@import "./sections/discuss";
+@import "./sections/footer";

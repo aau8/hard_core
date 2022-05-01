@@ -18,7 +18,7 @@
 		<header class="header">
             <div class="container">
                 <div class="header__wrap">
-                    <a href="#" class="header__logo"><img src="@img/logo.png" alt=""></a>
+                    <a href="#" class="header__logo"><img src="@img/logo.png" alt="" width="90" height="70"></a>
                     <nav class="menu">
                         <ul class="menu__list">
                             <li><a class="link-menu" href="#">Новости</a></li>
@@ -27,7 +27,7 @@
                             <li><a class="link-menu" href="#">Поддержка </a></li>
                         </ul>
                         <div class="menu-auth menu-auth_mobile">
-                            <button class="menu-si">
+                            <button class="menu-si" data-modal-open="sign-in">
                                 <span class="menu-si__icon">
                                     <i class="icon icon-lock-bg"></i>
                                     <i class="icon icon-lock"></i>
@@ -41,7 +41,7 @@
                         </div>
                     </nav>
                     <div class="menu-auth menu-auth_desktop">
-                        <button class="menu-si">
+                        <button class="menu-si" data-modal-open="sign-in">
                             <span class="menu-si__icon">
                                 <i class="icon icon-lock-bg"></i>
                                 <i class="icon icon-lock"></i>
@@ -268,6 +268,7 @@
                                     <button class="news__tab _active" data-tab-btn="all">Все</button>
                                     <button class="news__tab" data-tab-btn="updates">Обновления</button>
                                     <button class="news__tab" data-tab-btn="events">События</button>
+                                    <div class="news__tabs-roller"></div>
                                 </div>
                             </div>
                             <div class="news__body">
@@ -390,7 +391,7 @@
                     </div>
                     <div class="footer-copyright">
                         <div class="footer-copyright__content">
-                            <span class="footer-copyright__icon"><img src="@img/buttons/16+.png" alt=""></span>
+                            <span class="footer-copyright__icon"><img src="@img/buttons/16+.png" alt="" data-zoom></span>
                             <p class="footer-copyright__text">
                                 Copyright © 2021 HardCore.pw
                                 <br>
@@ -418,6 +419,66 @@
             </div>
         </footer>
 	</div>
+
+	<div class="modal modal-si" data-modal-id="sign-in">
+		<div class="modal__wrap modal-si__wrap">
+			<div class="modal__window modal-si__window">
+                <div class="modal-si__header">
+                    <div class="modal-si__section-arrow"><img src="@img/sign-in/section-arrow.png" alt=""></div>
+                    <h2 class="modal-si__title">Вход в ЛК</h2>
+                    <div class="modal-si__section-arrow"><img src="@img/sign-in/section-arrow.png" alt="" style="transform: rotate(180deg);"></div>
+                </div>
+                <!-- msi - modal sign in -->
+                <form action="#" class="msi-form" id="form-sign-in">
+                    <div class="msi-form__tf-list">
+                        <div class="tf" data-textfield-error="Error!">
+                            <label for="">Логин или E-mail</label>
+                            <div class="tf__field">
+                                <div class="tf__field-icon"><img src="@img/sign-in/login.png" alt=""></div>
+                                <input type="text" id="" data-tf-required>
+                            </div>
+                        </div>
+                        <div class="tf">
+                            <label for="">Введите пароль:</label>
+                            <div class="tf__field">
+                                <div class="tf__field-icon"><img src="@img/sign-in/password.png" alt=""></div>
+                                <input type="password" id="" data-tf-required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="msi-form__footer">
+                        <div class="msi-form__forgot">
+                            <div class="msi-form__forgot-icon"><img src="@img/sign-in/question.png" alt=""></div>
+                            <a href="#" class="msi-form__forgot-link">Забыли пароль?</a>
+                        </div>
+                        <button class="btn msi-form__submit">
+                            <span class="btn__bg msi-form__submit-bg"></span>
+                            <span class="btn__text msi-form__submit-text">Войти</span>
+                        </button>
+                    </div>
+                </form>
+                <div class="modal-si__help">
+                    <div class="modal-si__help-header">
+                        <div class="modal-si__section-arrow"><img src="@img/sign-in/section-arrow.png" alt=""></div>
+                        <h2 class="modal-si__help-title">Войти с помощью</h2>
+                        <div class="modal-si__section-arrow"><img src="@img/sign-in/section-arrow.png" alt="" style="transform: rotate(180deg);"></div>    
+                    </div>
+                    <div class="modal-si__help-list">
+                        <a href="#" class="modal-si__help-social"><img src="@img/sign-in/socials/facebook.png" alt=""></a>
+                        <a href="#" class="modal-si__help-social"><img src="@img/sign-in/socials/odnoklassniki.png" alt=""></a>
+                        <a href="#" class="modal-si__help-social"><img src="@img/sign-in/socials/google.png" alt=""></a>
+                        <a href="#" class="modal-si__help-social"><img src="@img/sign-in/socials/vk.png" alt=""></a>
+                    </div>
+                </div>
+                <button class="modal-close"><img src="@img/sign-in/close.png" alt=""></button>
+                <div class="modal-si__paper"><img src="@img/sign-in/paper.png" alt=""></div>
+                <div class="modal-si__wood-board"><img src="@img/sign-in/wood-board.png" alt=""></div>
+			</div>
+			<div class="modal__bg"></div>
+		</div>
+	</div>
+
+
 
     <script src="./js/bundle.min.js"></script>
 </body>

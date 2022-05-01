@@ -7,6 +7,7 @@ import notify from 'gulp-notify'
 import fileinclude from 'gulp-file-include';
 import replace from 'gulp-replace';
 import versionNumber from 'gulp-version-number'
+import webpHtmlNosvg from 'gulp-webp-html-nosvg'
 
 export default function htmlBuild () {
     del("./dist/*.html");
@@ -19,6 +20,10 @@ export default function htmlBuild () {
         ))
         .pipe(fileinclude())
         .pipe(replace(/@img\//g, './img/'))
+        .pipe(app.plugins.if(
+            app.isProd,
+            webpHtmlNosvg()
+        ))
         // .pipe(app.plugins.if(
         //     app.isProd,
         // ))

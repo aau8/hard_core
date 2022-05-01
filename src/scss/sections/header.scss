@@ -356,55 +356,49 @@ $hide-menu: 920px;
     }
 
     &._deactive {
-
-    }
-    &:hover {
         
-        @media (min-width: $min-hover) {
-            
-            & span {
-                // background: $text-accent;
-
-                &:nth-child(1) {
-                    // left: 0;
-                    // width: 80%;
-                    transform: translate(-50%, calc(-50% - 7px));
-                    animation: burgerLineHover .5s linear infinite;
-                }
-
-                &:nth-child(2) {
-                    transform: translate(-50%, -50%);
-                    animation: burgerLineHover .5s .03s linear infinite;
-                }
-
-                &:nth-child(3) {
-                    // left: auto;
-                    // right: 0;
-                    // width: 80%;
-                    transform: translate(-50%, calc(-50% + 7px));
-                    animation: burgerLineHover .5s .06s linear infinite;
-                }
-            }
-
-            @keyframes burgerLineHover {
-                0% {
-                    left: 50%;
-                }
-                25% {
-                    left: calc(50% + 1px);
-                }
-                50% {
-                    left: calc(50% - 1px);
-                }
-                75% {
-                    left: calc(50% + 1px);
-                }
-                100% {
-                    left: 50%;
-                }
-            }
-        }
     }
+    // &:hover {
+        
+    //     @media (min-width: $min-hover) {
+            
+    //         & span {
+
+    //             &:nth-child(1) {
+    //                 transform: translate(-50%, calc(-50% - 7px));
+    //                 animation: burgerLineHover .5s linear infinite;
+    //             }
+
+    //             &:nth-child(2) {
+    //                 transform: translate(-50%, -50%);
+    //                 animation: burgerLineHover .5s .03s linear infinite;
+    //             }
+
+    //             &:nth-child(3) {
+    //                 transform: translate(-50%, calc(-50% + 7px));
+    //                 animation: burgerLineHover .5s .06s linear infinite;
+    //             }
+    //         }
+
+    //         @keyframes burgerLineHover {
+    //             0% {
+    //                 left: 50%;
+    //             }
+    //             25% {
+    //                 left: calc(50% + 1px);
+    //             }
+    //             50% {
+    //                 left: calc(50% - 1px);
+    //             }
+    //             75% {
+    //                 left: calc(50% + 1px);
+    //             }
+    //             100% {
+    //                 left: 50%;
+    //             }
+    //         }
+    //     }
+    // }
 
     & span {
         position: absolute;

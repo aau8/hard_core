@@ -1,0 +1,227 @@
+.modal-si__window {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $text-dark;
+    padding: 64px 24px 80px;
+
+    @media (max-width: $mobile-l) {
+        padding: 48px 32pxpx;
+    }
+
+    @media (max-width: $mobile-m) {
+        padding: 48px 24px;
+    }
+}
+
+.modal-si__paper {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.98);
+
+    & img {
+        object-fit: fill;
+    }
+}
+
+.modal-si__wood-board {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    & img {
+        object-fit: fill;
+    }
+}
+
+.modal-si__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-si__section-arrow {
+    height: 30px;
+}
+
+.modal-si__title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 20px;
+    white-space: nowrap;
+
+    @media (max-width: $mobile-l) {
+        font-size: 20px;
+        margin: 0 16px;
+    }
+
+    @media (max-width: $mobile-m) {
+        font-size: 18px;
+        margin: 0 12px;
+    }
+}
+
+// Форма
+.msi-form {
+    max-width: 400px;
+    width: 100%;
+    margin: 32px 0;
+
+    @media (max-width: $mobile-l) {
+        @media (max-width: $mobile-l) {
+            margin: 24px 0;
+        }
+    }
+}
+
+.msi-form__tf-list {
+    
+    & > .tf:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+// Подвал формы
+.msi-form__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+
+    @media (max-width: $mobile-l) {
+        flex-direction: column-reverse;
+        margin-top: 24px;
+    }
+}
+
+.msi-form__forgot {
+    display: flex;
+    align-items: center;
+}
+
+.msi-form__forgot-icon {
+    width: 42px;
+    height: 42px;
+
+    @media (max-width: $mobile-l) {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.msi-form__forgot-link {
+    color: #9C4411;
+    margin-left: 12px;
+    white-space: nowrap;
+
+    @media (max-width: $mobile-l) {
+        margin-left: 8px;
+    }
+}
+
+.msi-form__submit {
+    width: 175px;
+    height: 55px;
+    margin-left: 16px;
+
+    @media (max-width: $mobile-l) {
+        margin-left: 0;
+    }
+}
+
+.msi-form__submit-bg {
+    background: center/100% 55px no-repeat url('@img/buttons/sign-in.png');
+}
+
+.msi-form__submit-text {
+    top: 42%;
+    font-size: 11px;
+    color: #fff;
+}
+
+// Войти с помощью
+.modal-si__help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin-top: 32px;
+}
+
+.modal-si__help-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-si__help-title {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 20px;
+    white-space: nowrap;
+
+    @media (max-width: $mobile-l) {
+        font-size: 16px;
+        margin: 0 16px;
+    }
+
+    @media (max-width: $mobile-m) {
+        margin: 0 12px;
+    }
+}
+
+// Список с соц. сетями
+.modal-si__help-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.modal-si__help-social {
+    position: relative;
+    max-width: 55px;
+    width: 100%;
+    display: block;
+    transition: $tr;
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            transform: scale(1.1);
+        }
+    }
+
+    &:active {
+        
+        @media (min-width: $min-hover) {
+            transform: scale(1);
+        }
+
+        transform: scale(.9);
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 80%;
+    }
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

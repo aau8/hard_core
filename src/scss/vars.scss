@@ -5,7 +5,8 @@ $text-second: #868178;
 $text-dark: #070605;
 $text-accent: #FFCD6D;
 
-$link-active: #ffaa07;
+// $link-active: #ffaa07;
+$link-active: brig-color(#FFCD6D, -30%);
 
 // $text-gray-light: #A3AAC0;
 // $text-light: #fff;
@@ -33,23 +34,27 @@ $border-line: #272828;
 
 $error: #EB5757;
 
+// Текстовые поля
+$tf-label: #64564E;
+$tf-bg: rgba(100,86,78,.2);
+
 // Цвета кнопок в файле 'scss/elements/button.scss'
 // ================ Colors End ================
 
 
 // ================ Shadow Start ================
-$shadow-orange: 0px 43px 80px rgba(3, 8, 17, 0.04), 0px 17.9644px 33.4221px rgba(3, 8, 17, 0.0287542), 0px 9.60461px 17.869px rgba(3, 8, 17, 0.0238443), 0px 5.38427px 10.0172px rgba(3, 8, 17, 0.02), 0px 2.85954px 5.32008px rgba(3, 8, 17, 0.0161557), 0px 1.18992px 2.21381px rgba(3, 8, 17, 0.0112458);
-$shadow-blue: 0px 15px 30px rgba(44, 103, 144, 0.09);
-$shadow-gray: 0px 8px 16px rgba(34, 19, 77, 0.07);
-$shadow-conception: 0px 15px 30px rgba(44, 103, 144, 0.09);
+// $shadow-orange: 0px 43px 80px rgba(3, 8, 17, 0.04), 0px 17.9644px 33.4221px rgba(3, 8, 17, 0.0287542), 0px 9.60461px 17.869px rgba(3, 8, 17, 0.0238443), 0px 5.38427px 10.0172px rgba(3, 8, 17, 0.02), 0px 2.85954px 5.32008px rgba(3, 8, 17, 0.0161557), 0px 1.18992px 2.21381px rgba(3, 8, 17, 0.0112458);
+// $shadow-blue: 0px 15px 30px rgba(44, 103, 144, 0.09);
+// $shadow-gray: 0px 8px 16px rgba(34, 19, 77, 0.07);
+// $shadow-conception: 0px 15px 30px rgba(44, 103, 144, 0.09);
 // ================ Shadow End ================
 
 
 // ================ Radius Start ================
-$radius-l: 32px;
-$radius-m: 16px;
-$radius-s: 8px;
-$radius-round: 200px;
+// $radius-l: 32px;
+// $radius-m: 16px;
+// $radius-s: 8px;
+// $radius-round: 200px;
 // ================ Radius End ================
 
 
