@@ -9,8 +9,8 @@
 	<meta name="description" content="Description">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap&_v=20220502020737" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.min.css?_v=20220502020737">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap&_v=20220502033658" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20220502033658">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 		<header class="header">
             <div class="container">
                 <div class="header__wrap">
-                    <a href="#" class="header__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="" width="257" height="105"></picture></a>
+                    <a href="#" class="header__logo" aria-label="Логотип сайта | Ссылка на главную страницу"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="" width="90" height="70"></picture></a>
                     <nav class="menu">
                         <ul class="menu__list">
                             <li><a class="link-menu" href="#">Новости</a></li>
@@ -48,13 +48,12 @@
                             </span>
                             <span class="menu-si__text">Вход в ЛК</span>
                         </button>
-                        <!-- <button class="menu-su">Регистрация</button> -->
                         <button class="btn menu-su">
                             <span class="btn__bg menu-su__bg"></span>
                             <span class="btn__text menu-su__text">Регистрация</span>
                         </button>
                     </div>
-                    <button class="burger _deactive">
+                    <button class="burger _deactive" aria-label="Открыть/закрыть меню">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -374,7 +373,7 @@
         </div>
 		<footer class="footer">
             <div class="footer__fire"><picture><source srcset="./img/fire/fire-footer.webp" type="image/webp"><img src="./img/fire/fire-footer.png" alt=""></picture></div>
-            <button class="back-to-top">
+            <button class="back-to-top" aria-label="Вернуться наверх страницы">
                 <picture><source srcset="./img/back-to-top.webp" type="image/webp"><img src="./img/back-to-top.png" alt=""></picture>
             </button>
             <div class="container">
@@ -391,7 +390,7 @@
                     </div>
                     <div class="footer-copyright">
                         <div class="footer-copyright__content">
-                            <span class="footer-copyright__icon"><picture><source srcset="./img/buttons/16+.webp" type="image/webp"><img src="./img/buttons/16+.png" alt="" data-zoom></picture></span>
+                            <span class="footer-copyright__icon"><picture><source srcset="./img/buttons/16+.webp" type="image/webp"><img src="./img/buttons/16+.png" alt=""></picture></span>
                             <p class="footer-copyright__text">
                                 Copyright © 2021 HardCore.pw
                                 <br>
@@ -409,11 +408,11 @@
                             <a href="#" class="link-menu footer__doc">Политика конфиденциальности</a>
                         </div>
                         <div class="footer__socials">
-                            <a href="#" class="footer__social"><picture><source srcset="./img/socials/facebook.webp" type="image/webp"><img src="./img/socials/facebook.png" alt=""></picture></a>
-                            <a href="#" class="footer__social"><picture><source srcset="./img/socials/youtube.webp" type="image/webp"><img src="./img/socials/youtube.png" alt=""></picture></a>
-                            <a href="#" class="footer__social"><picture><source srcset="./img/socials/discord.webp" type="image/webp"><img src="./img/socials/discord.png" alt=""></picture></a>
+                            <a href="#" class="footer__social" aria-label="Ссылка на Facebook"><picture><source srcset="./img/socials/facebook.webp" type="image/webp"><img src="./img/socials/facebook.png" alt=""></picture></a>
+                            <a href="#" class="footer__social" aria-label="Ссылка на Youtube"><picture><source srcset="./img/socials/youtube.webp" type="image/webp"><img src="./img/socials/youtube.png" alt=""></picture></a>
+                            <a href="#" class="footer__social" aria-label="Ссылка на Discord"><picture><source srcset="./img/socials/discord.webp" type="image/webp"><img src="./img/socials/discord.png" alt=""></picture></a>
                         </div>
-                        <a href="#" class="footer__signa"><picture><source srcset="./img/signa.webp" type="image/webp"><img src="./img/signa.png" alt=""></picture></a>
+                        <a href="#" class="footer__signa" aria-label="Ссылка на студию, разработавшая дизайн сайта"><picture><source srcset="./img/signa.webp" type="image/webp"><img src="./img/signa.png" alt=""></picture></a>
                     </div>
                 </div>
             </div>
@@ -432,17 +431,17 @@
                 <form action="#" class="msi-form" id="form-sign-in">
                     <div class="msi-form__tf-list">
                         <div class="tf" data-textfield-error="Error!">
-                            <label for="">Логин или E-mail</label>
+                            <label for="msi-login">Логин или E-mail</label>
                             <div class="tf__field">
                                 <div class="tf__field-icon"><picture><source srcset="./img/sign-in/login.webp" type="image/webp"><img src="./img/sign-in/login.png" alt=""></picture></div>
-                                <input type="text" id="" data-tf-required>
+                                <input type="text" id="msi-login" name="login" data-tf-required>
                             </div>
                         </div>
                         <div class="tf">
-                            <label for="">Введите пароль:</label>
+                            <label for="msi-password">Введите пароль:</label>
                             <div class="tf__field">
                                 <div class="tf__field-icon"><picture><source srcset="./img/sign-in/password.webp" type="image/webp"><img src="./img/sign-in/password.png" alt=""></picture></div>
-                                <input type="password" id="" data-tf-required>
+                                <input type="password" id="msi-password" name="password" data-tf-required>
                             </div>
                         </div>
                     </div>
@@ -464,10 +463,10 @@
                         <div class="modal-si__section-arrow"><picture><source srcset="./img/sign-in/section-arrow.webp" type="image/webp"><img src="./img/sign-in/section-arrow.png" alt="" style="transform: rotate(180deg);"></picture></div>    
                     </div>
                     <div class="modal-si__help-list">
-                        <a href="#" class="modal-si__help-social"><picture><source srcset="./img/sign-in/socials/facebook.webp" type="image/webp"><img src="./img/sign-in/socials/facebook.png" alt=""></picture></a>
-                        <a href="#" class="modal-si__help-social"><picture><source srcset="./img/sign-in/socials/odnoklassniki.webp" type="image/webp"><img src="./img/sign-in/socials/odnoklassniki.png" alt=""></picture></a>
-                        <a href="#" class="modal-si__help-social"><picture><source srcset="./img/sign-in/socials/google.webp" type="image/webp"><img src="./img/sign-in/socials/google.png" alt=""></picture></a>
-                        <a href="#" class="modal-si__help-social"><picture><source srcset="./img/sign-in/socials/vk.webp" type="image/webp"><img src="./img/sign-in/socials/vk.png" alt=""></picture></a>
+                        <a href="#" class="modal-si__help-social" aria-label="Регистрация через Facebook"><picture><source srcset="./img/sign-in/socials/facebook.webp" type="image/webp"><img src="./img/sign-in/socials/facebook.png" alt=""></picture></a>
+                        <a href="#" class="modal-si__help-social" aria-label="Регистрация через Одноклассники"><picture><source srcset="./img/sign-in/socials/odnoklassniki.webp" type="image/webp"><img src="./img/sign-in/socials/odnoklassniki.png" alt=""></picture></a>
+                        <a href="#" class="modal-si__help-social" aria-label="Регистрация через Google"><picture><source srcset="./img/sign-in/socials/google.webp" type="image/webp"><img src="./img/sign-in/socials/google.png" alt=""></picture></a>
+                        <a href="#" class="modal-si__help-social" aria-label="Регистрация через ВКонтакте"><picture><source srcset="./img/sign-in/socials/vk.webp" type="image/webp"><img src="./img/sign-in/socials/vk.png" alt=""></picture></a>
                     </div>
                 </div>
                 <button class="modal-close"><picture><source srcset="./img/sign-in/close.webp" type="image/webp"><img src="./img/sign-in/close.png" alt=""></picture></button>
@@ -478,9 +477,7 @@
 		</div>
 	</div>
 
-
-
-    <script src="./js/bundle.min.js?_v=20220502020737"></script>
+    <script src="./js/bundle.min.js?_v=20220502033658"></script>
 </body>
 
 </html>

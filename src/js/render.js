@@ -1,4 +1,29 @@
-import { removeAll } from "./utilities/functions.js"
+import { removeAll, isWebp } from "./utilities/functions.js"
+
+isWebp()
+
+// Ленивая загрузка изображений
+// lazyLoading();
+// function lazyLoading() {
+//     const imgElems = document.querySelectorAll("[data-lazy-loading]")
+//     const windowHeight = document.documentElement.clientHeight
+
+//     imgShow()
+//     window.addEventListener("scroll", function () {
+//         imgShow()
+//     })
+
+//     function imgShow() {
+//         for (let i = 0; i < imgElems.length; i++) {
+//             const img = imgElems[i];
+
+//             if (img.getBoundingClientRect().top - windowHeight < 500 && (img.getAttribute('src') == '' || img.getAttribute('src') == null)) {
+//                 img.setAttribute("src", img.dataset.lazyLoading)
+//                 img.removeAttribute('data-lazy-loading')
+//             }
+//         }
+//     }
+// }
 
 // hover-эффект у таблицы с рейтингом
 const table = document.querySelector('.rating__table')
@@ -8,7 +33,7 @@ const rating = document.querySelector('.rating')
 
 for (let i = 0; i < rowElems.length; i++) {
     const row = rowElems[i];
-    
+
     row.addEventListener('mouseenter', e => {        
         const ratingPageY = window.scrollY + rating.getBoundingClientRect().top
         const rowPageY = window.scrollY + row.getBoundingClientRect().top

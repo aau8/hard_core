@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 		<header class="header">
             <div class="container">
                 <div class="header__wrap">
-                    <a href="#" class="header__logo"><img src="@img/logo.png" alt="" width="90" height="70"></a>
+                    <a href="#" class="header__logo" aria-label="Логотип сайта | Ссылка на главную страницу"><img src="@img/logo.png" alt="" width="90" height="70"></a>
                     <nav class="menu">
                         <ul class="menu__list">
                             <li><a class="link-menu" href="#">Новости</a></li>
@@ -48,13 +48,12 @@
                             </span>
                             <span class="menu-si__text">Вход в ЛК</span>
                         </button>
-                        <!-- <button class="menu-su">Регистрация</button> -->
                         <button class="btn menu-su">
                             <span class="btn__bg menu-su__bg"></span>
                             <span class="btn__text menu-su__text">Регистрация</span>
                         </button>
                     </div>
-                    <button class="burger _deactive">
+                    <button class="burger _deactive" aria-label="Открыть/закрыть меню">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -125,10 +124,10 @@
                                     </div>
                                     <div class="ideal-world__play"><img src="@img/ideal-world/play.png" alt=""></div>
                                     <div class="ideal-world__bg"><img src="@img/ideal-world/background.png" alt=""></div>
-                                    <div class="ideal-world__hero"><img src="@img/ideal-world/hero.png" alt=""></div>
+                                    <div class="ideal-world__hero"><img src="@img/ideal-world/hero.png" alt="" width="408" height="370"></div>
                                 </div>
                             </a>
-                            <div class="ideal-world__hero ideal-world__hero-bg"><img src="@img/ideal-world/hero.png" alt=""></div>
+                            <div class="ideal-world__hero ideal-world__hero-bg"><img src="@img/ideal-world/hero.png" alt="" width="408" height="370"></div>
                         </section>
                         <section class="rating">
                             <div class="rating__content">
@@ -374,7 +373,7 @@
         </div>
 		<footer class="footer">
             <div class="footer__fire"><img src="@img/fire/fire-footer.png" alt=""></div>
-            <button class="back-to-top">
+            <button class="back-to-top" aria-label="Вернуться наверх страницы">
                 <img src="@img/back-to-top.png" alt="">
             </button>
             <div class="container">
@@ -391,7 +390,7 @@
                     </div>
                     <div class="footer-copyright">
                         <div class="footer-copyright__content">
-                            <span class="footer-copyright__icon"><img src="@img/buttons/16+.png" alt="" data-zoom></span>
+                            <span class="footer-copyright__icon"><img src="@img/buttons/16+.png" alt=""></span>
                             <p class="footer-copyright__text">
                                 Copyright © 2021 HardCore.pw
                                 <br>
@@ -409,11 +408,11 @@
                             <a href="#" class="link-menu footer__doc">Политика конфиденциальности</a>
                         </div>
                         <div class="footer__socials">
-                            <a href="#" class="footer__social"><img src="@img/socials/facebook.png" alt=""></a>
-                            <a href="#" class="footer__social"><img src="@img/socials/youtube.png" alt=""></a>
-                            <a href="#" class="footer__social"><img src="@img/socials/discord.png" alt=""></a>
+                            <a href="#" class="footer__social" aria-label="Ссылка на Facebook"><img src="@img/socials/facebook.png" alt=""></a>
+                            <a href="#" class="footer__social" aria-label="Ссылка на Youtube"><img src="@img/socials/youtube.png" alt=""></a>
+                            <a href="#" class="footer__social" aria-label="Ссылка на Discord"><img src="@img/socials/discord.png" alt=""></a>
                         </div>
-                        <a href="#" class="footer__signa"><img src="@img/signa.png" alt=""></a>
+                        <a href="#" class="footer__signa" aria-label="Ссылка на студию, разработавшая дизайн сайта"><img src="@img/signa.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -432,17 +431,17 @@
                 <form action="#" class="msi-form" id="form-sign-in">
                     <div class="msi-form__tf-list">
                         <div class="tf" data-textfield-error="Error!">
-                            <label for="">Логин или E-mail</label>
+                            <label for="msi-login">Логин или E-mail</label>
                             <div class="tf__field">
                                 <div class="tf__field-icon"><img src="@img/sign-in/login.png" alt=""></div>
-                                <input type="text" id="" data-tf-required>
+                                <input type="text" id="msi-login" name="login" data-tf-required>
                             </div>
                         </div>
                         <div class="tf">
-                            <label for="">Введите пароль:</label>
+                            <label for="msi-password">Введите пароль:</label>
                             <div class="tf__field">
                                 <div class="tf__field-icon"><img src="@img/sign-in/password.png" alt=""></div>
-                                <input type="password" id="" data-tf-required>
+                                <input type="password" id="msi-password" name="password" data-tf-required>
                             </div>
                         </div>
                     </div>
@@ -464,10 +463,10 @@
                         <div class="modal-si__section-arrow"><img src="@img/sign-in/section-arrow.png" alt="" style="transform: rotate(180deg);"></div>    
                     </div>
                     <div class="modal-si__help-list">
-                        <a href="#" class="modal-si__help-social"><img src="@img/sign-in/socials/facebook.png" alt=""></a>
-                        <a href="#" class="modal-si__help-social"><img src="@img/sign-in/socials/odnoklassniki.png" alt=""></a>
-                        <a href="#" class="modal-si__help-social"><img src="@img/sign-in/socials/google.png" alt=""></a>
-                        <a href="#" class="modal-si__help-social"><img src="@img/sign-in/socials/vk.png" alt=""></a>
+                        <a href="#" class="modal-si__help-social" aria-label="Регистрация через Facebook"><img src="@img/sign-in/socials/facebook.png" alt=""></a>
+                        <a href="#" class="modal-si__help-social" aria-label="Регистрация через Одноклассники"><img src="@img/sign-in/socials/odnoklassniki.png" alt=""></a>
+                        <a href="#" class="modal-si__help-social" aria-label="Регистрация через Google"><img src="@img/sign-in/socials/google.png" alt=""></a>
+                        <a href="#" class="modal-si__help-social" aria-label="Регистрация через ВКонтакте"><img src="@img/sign-in/socials/vk.png" alt=""></a>
                     </div>
                 </div>
                 <button class="modal-close"><img src="@img/sign-in/close.png" alt=""></button>
@@ -477,8 +476,6 @@
 			<div class="modal__bg"></div>
 		</div>
 	</div>
-
-
 
     <script src="./js/bundle.min.js"></script>
 </body>

@@ -11,6 +11,7 @@ import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import groupCssMediaQueries from 'gulp-group-css-media-queries'
 import replace from 'gulp-replace';
+import webpcss from 'gulp-webpcss'
 
 const sass = gulpSass(dartSass);
 
@@ -37,6 +38,12 @@ export default function cssBuild() {
                 overrideBrowserslist: ["last 3 versions"],
             })
         ))
+        .pipe(app.plugins.if(
+            app.isProd,
+            webpcss({
+                webpClass: '.webp',
+                noWebpClass: '.no-webp'
+        })))
         .pipe(gulp.dest(app.path.build.css))
 
         .pipe(app.plugins.if(
