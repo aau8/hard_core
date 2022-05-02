@@ -15,7 +15,6 @@ if (window.innerWidth <= 920) {
 
         if (!menuActive) {
             header.style.maxHeight = menuHeight + headerHeight + "px";
-            // animationBurger(true)
             burger.classList.add('_activeAnim')
 
             setTimeout(e => {
@@ -26,7 +25,6 @@ if (window.innerWidth <= 920) {
             menuActive = true;
         } else {
             header.style.maxHeight = headerHeightDefault + "px";
-            // animationBurger(false)
             burger.classList.add('_deactiveAnim')
             
             setTimeout(e => {
@@ -37,19 +35,4 @@ if (window.innerWidth <= 920) {
             menuActive = false;
         }
     });
-
-
-    // function animationBurger(active) {
-    //     const lines = burger.querySelectorAll('span')
-    //     const [line1, line2, line3] = lines
-
-    //     if (active) {
-
-    //     }
-    //     else {
-
-    //     }
-
-    //     console.log(line1, line2, line3)
-    // }
 }

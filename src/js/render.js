@@ -2,29 +2,6 @@ import { removeAll, isWebp } from "./utilities/functions.js"
 
 isWebp()
 
-// Ленивая загрузка изображений
-// lazyLoading();
-// function lazyLoading() {
-//     const imgElems = document.querySelectorAll("[data-lazy-loading]")
-//     const windowHeight = document.documentElement.clientHeight
-
-//     imgShow()
-//     window.addEventListener("scroll", function () {
-//         imgShow()
-//     })
-
-//     function imgShow() {
-//         for (let i = 0; i < imgElems.length; i++) {
-//             const img = imgElems[i];
-
-//             if (img.getBoundingClientRect().top - windowHeight < 500 && (img.getAttribute('src') == '' || img.getAttribute('src') == null)) {
-//                 img.setAttribute("src", img.dataset.lazyLoading)
-//                 img.removeAttribute('data-lazy-loading')
-//             }
-//         }
-//     }
-// }
-
 // hover-эффект у таблицы с рейтингом
 const table = document.querySelector('.rating__table')
 const rowElems = table.querySelectorAll('tbody tr:not(:first-child)')

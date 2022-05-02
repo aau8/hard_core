@@ -12,11 +12,8 @@ function modal() {
             if (target.dataset.modalOpen != undefined || target.closest('[data-modal-open]')) {
                 const btn = target.closest('[data-modal-open]') ? target.closest('[data-modal-open]') : target;
                 const dataBtn = btn.dataset.modalOpen;
-                const modal = document.querySelector(`#${dataBtn}`)
 
                 window.location.hash = dataBtn
-
-                // openModal(modal)
             }
         })
     }
@@ -49,7 +46,6 @@ function modal() {
     function closeModalWhenClickingOnBg() {
         document.addEventListener('click', (e) => {
             const target = e.target
-            // const modal = document.querySelector('.modal._show')
 
             if (target.classList.contains('modal__bg')) {
                 closeModal(target.closest('.modal'))
