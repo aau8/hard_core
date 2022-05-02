@@ -1,7 +1,6 @@
 .main {
     position: relative;
     width: 100%;
-    // background: center/100% 1080px no-repeat url('@img/main-bg.png');
 }
 
 .main__bg {
@@ -179,29 +178,11 @@
     }
 }
 
-.hero-man__hero {
-
-}
-
 .hero-man__shadow-main {
     position: absolute;
     z-index: -1;
     top: 0;
     left: -10%;
-    // animation: pulseManShadow 6s linear infinite;
-
-    // @keyframes pulseManShadow {
-    //     0% {
-    //         opacity: 1;
-    //     }
-
-    //     50% {
-    //         opacity: 0;
-    //     }
-    //     100% {
-    //         opacity: 1;
-    //     }
-    // }
 
     @keyframes pulseManShadow {
         0% {
@@ -308,10 +289,6 @@
     }
 }
 
-.hero-woman__hero {
-
-}
-
 .hero-woman__shadow-main {
     position: absolute;
     z-index: -1;
@@ -410,14 +387,6 @@
     @media (max-width: 600px) {
         font-size: 20px;
     }
-}
-
-.server__bg {
-
-}
-
-.main-info {
-
 }
 
 .server__time {

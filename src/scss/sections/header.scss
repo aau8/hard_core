@@ -29,14 +29,6 @@ $hide-menu: 920px;
     height: 100%;
 
     & img {
-        // position: absolute;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(calc(-50% + 20px), -50%);
-        // width: auto;
-        // height: 100%;
-        // pointer-events: none;
-        
         position: absolute;
         top: 0;
         left: 50%;
@@ -56,7 +48,6 @@ $hide-menu: 920px;
         transform: translate(-50%, 100%);
         width: 100%;
         padding: 24px 0;
-        // border-top: 1px solid $border-line;
     }
 }
 
@@ -66,7 +57,6 @@ $hide-menu: 920px;
     
     @media (max-width: $hide-menu) {
         flex-direction: column;
-        // padding: 20px 0;
     }
 
     & li {
@@ -203,10 +193,6 @@ $hide-menu: 920px;
         margin-right: 12px;
     }
 
-    @media (max-width: 500px) {
-        // display: none;
-    }
-
     &:hover {
         
         @media (min-width: $min-hover) {
@@ -231,7 +217,6 @@ $hide-menu: 920px;
                 100% {
                     transform: translate(-50%, -50%) rotate(0);
                 }
-
             }
             
             & .menu-si__text {
@@ -279,68 +264,16 @@ $hide-menu: 920px;
 
 // Кнопка регистрации
 .menu-su {
-//     position: relative;
     width: 188px;
     height: 36px;
-//     transition: $tr;
-
-//     @media (max-width: $mobile-m) {
-//         width: 168px;
-//     }
-
-//     &:hover {
-        
-//         @media (min-width: $min-hover) {
-//             transform: scale(1.05);
-
-//             & .menu-su__text {
-//                 letter-spacing: .1em;
-//             }
-//         }
-//     }
-
-//     &:active {
-//         @media (min-width: $min-hover) {
-//             transform: scale(1);
-
-//             & .menu-su__text {
-//                 letter-spacing: .05em;
-//             }
-//         }
-        
-//         transform: scale(0.95);
-
-//         & .menu-su__text {
-//             letter-spacing: .03em;
-
-//         }
-//     }
 }
 
 .menu-su__bg {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // width: 100%;
-    // height: 100%;
-    // background: center/100% 60px no-repeat url('@img/buttons/btn-header-green.png');
     background: center/100% 60px no-repeat url('@img/buttons/btn-header-green.png');
 }
 
 .menu-su__text {
-    // position: relative;
-    // z-index: 1;
-    // display: block;
-    // text-transform: uppercase;
     font-size: 11px;
-    // text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.7);
-    // letter-spacing: 0.1em;
-    // user-select: none;
-    // transition: $tr;
-
-    // @media (min-width: $min-hover) {
-    //     letter-spacing: 0.05em;
-    // }
 }
 
 // Бургер
@@ -354,51 +287,6 @@ $hide-menu: 920px;
     @media (max-width: $hide-menu) {
         display: block;
     }
-
-    &._deactive {
-        
-    }
-    // &:hover {
-        
-    //     @media (min-width: $min-hover) {
-            
-    //         & span {
-
-    //             &:nth-child(1) {
-    //                 transform: translate(-50%, calc(-50% - 7px));
-    //                 animation: burgerLineHover .5s linear infinite;
-    //             }
-
-    //             &:nth-child(2) {
-    //                 transform: translate(-50%, -50%);
-    //                 animation: burgerLineHover .5s .03s linear infinite;
-    //             }
-
-    //             &:nth-child(3) {
-    //                 transform: translate(-50%, calc(-50% + 7px));
-    //                 animation: burgerLineHover .5s .06s linear infinite;
-    //             }
-    //         }
-
-    //         @keyframes burgerLineHover {
-    //             0% {
-    //                 left: 50%;
-    //             }
-    //             25% {
-    //                 left: calc(50% + 1px);
-    //             }
-    //             50% {
-    //                 left: calc(50% - 1px);
-    //             }
-    //             75% {
-    //                 left: calc(50% + 1px);
-    //             }
-    //             100% {
-    //                 left: 50%;
-    //             }
-    //         }
-    //     }
-    // }
 
     & span {
         position: absolute;

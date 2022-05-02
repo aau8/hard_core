@@ -1,8 +1,6 @@
 .ideal-world {
     position: relative;
-    // max-width: 600px;
     width: 100%;
-    // display: block;
 
     &::before {
         content: '';
@@ -21,10 +19,6 @@
             & .ideal-world__play {
                 transform: scale(1.05);
             }
-
-            & .ideal-world__bg img {
-                // transform: scale(1.02);
-            }
         }
     }
 }
@@ -37,9 +31,6 @@
     height: 100%;
     display: block;
     overflow: hidden;
-}
-
-.ideal-world__wrap {
 }
 
 .ideal-world__content {
@@ -114,9 +105,4 @@
     overflow: hidden;
     clip: rect(0px, 355px, 85px, 50px);
     pointer-events: none;
-
-    & img {
-        width: initial;
-        height: initial;
-    }
 }

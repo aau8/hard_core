@@ -3,10 +3,6 @@
 @import "vars"; // Переменные
 @import "reset"; // Сброс css
 
-// Общие стили для страниц
-// @include selection {} // Стиль выделения элементов на странице
-// @include scrollbar(); // Стиль скроллбара
-
 html {
     scroll-behavior: smooth;
 }
@@ -43,10 +39,6 @@ body {
         @media (max-width: $tablet) {
             margin: 50px 0 70px 0;
         }
-
-        @media (max-width: $mobile-l) {
-            // margin: 50px 0 40px 0;
-        }
     }
 }
 
@@ -80,21 +72,16 @@ body {
 
 @import "grid"; // Сетка
 
-// Анимация
-@import "./animation";
-
 // Элементы
 @import "./elements/buttons";
 @import "./elements/textfield";
 
 // Компоненты
-// @import './components/_forms';
 @import "./components/modals/modal";
 @import "./components/modals/modal-si";
 
 // Текстовые компоненты
 @import "./components/text/text";
-@import "./components/text/titles";
 
 // Спрайты
 @import "./sprites/general";

@@ -1,7 +1,5 @@
 // ================ Container Start ================
 $container: 1200px;
-// $container-l: 1128px;
-// $container-main: 1160px;
 $container-gap: 24px;
 $container-gap-mobile: 16px;
 // ================ Container End ================
@@ -21,13 +19,5 @@ $container-gap-mobile: 16px;
         padding-left: $container-gap-mobile;
         padding-right: $container-gap-mobile;
     }
-
-    // &_l {
-    //     max-width: mwContainer($container-l);
-    // }
-
-    // &_main {
-    //     max-width: mwContainer($container-main);
-    // }
 }
 
