@@ -619,6 +619,8 @@ body._lock {
 }
 
 .header {
+  position: relative;
+  z-index: 1;
   max-height: 70px;
   background: #080A0A;
   -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.99);
@@ -1062,6 +1064,9 @@ body._lock {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transform: translateY(-15px);
+      -ms-transform: translateY(-15px);
+          transform: translateY(-15px);
 }
 
 .main__wrap {
@@ -1174,6 +1179,9 @@ body._lock {
   left: -15%;
   max-width: 720px;
   width: 120%;
+  opacity: 0;
+  -webkit-animation: showHero 1s ease-in-out forwards;
+          animation: showHero 1s ease-in-out forwards;
 }
 
 @-webkit-keyframes flyMan {
@@ -1225,6 +1233,9 @@ body._lock {
   left: 44%;
   max-width: 480px;
   width: 80%;
+  opacity: 0;
+  -webkit-animation: showHero 1s 0.2s ease-in-out forwards;
+          animation: showHero 1s 0.2s ease-in-out forwards;
 }
 
 @-webkit-keyframes flyWoman {
@@ -1290,6 +1301,62 @@ body._lock {
   width: 12%;
   height: 8%;
   mix-blend-mode: soft-light;
+}
+
+@-webkit-keyframes showHeroMan {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes showHeroMan {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes showHero {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes showHero {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 @-webkit-keyframes pulseWoman {
@@ -3097,6 +3164,8 @@ discuss-forum__text {
     top: -120%;
     left: auto;
     right: 48%;
+    -webkit-animation-name: showHeroMan;
+            animation-name: showHeroMan;
   }
 
   .hero-man__wrap {
@@ -3108,6 +3177,8 @@ discuss-forum__text {
     max-width: 390px;
     top: -170%;
     left: 55%;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
   }
 
   .hero-woman__wrap {

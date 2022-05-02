@@ -1,6 +1,8 @@
 $hide-menu: 920px;
 
 .header {
+    position: relative;
+    z-index: 1;
     max-height: 70px;
     background: $frame-dark;
     box-shadow: 0 0 18px rgba(0,0,0,.99);

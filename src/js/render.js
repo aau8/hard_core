@@ -1,6 +1,20 @@
 import { removeAll, isWebp } from "./utilities/functions.js"
+import Parallax from 'parallax-js'
 
 isWebp()
+
+// Паралакс героев
+const parallaxHeroMan = new Parallax(document.querySelector('.hero-man'))
+const parallaxHeroWoman = new Parallax(document.querySelector('.hero-woman'))
+
+// Паралакс фона на главной при скролле
+const mainBg = document.querySelector('.main__bg img')
+
+mainBg.style.top = window.scrollY / 4 + 'px'
+
+document.addEventListener('scroll', function(){
+  mainBg.style.top = window.scrollY / 4 + 'px'
+});
 
 // hover-эффект у таблицы с рейтингом
 const table = document.querySelector('.rating__table')
@@ -185,17 +199,4 @@ function textfieldAddError(textfield, errorText) {
 function textfieldRemoveError(textfield) {
     textfield.removeAttribute('data-textfield-error')
     textfield.classList.remove('_textfield-error')
-}
-
-// Анимация
-if (window.innerWidth > 768) {
-    const heroMan = document.querySelector('.hero-man');
-    const heroWoman = document.querySelector('.hero-woman');
-    
-    window.addEventListener('mousemove', function(e) { 
-        let x = e.clientX / window.innerWidth;
-        let y = e.clientY / window.innerHeight; 	
-        heroMan.style.transform = 'translate(-' + x * 80 + 'px, -' + y * 80 + 'px)';
-        heroWoman.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 30 + 'px)';
-    });	
 }
