@@ -186,3 +186,16 @@ function textfieldRemoveError(textfield) {
     textfield.removeAttribute('data-textfield-error')
     textfield.classList.remove('_textfield-error')
 }
+
+// Анимация
+if (window.innerWidth > 768) {
+    const heroMan = document.querySelector('.hero-man');
+    const heroWoman = document.querySelector('.hero-woman');
+    
+    window.addEventListener('mousemove', function(e) { 
+        let x = e.clientX / window.innerWidth;
+        let y = e.clientY / window.innerHeight; 	
+        heroMan.style.transform = 'translate(-' + x * 80 + 'px, -' + y * 80 + 'px)';
+        heroWoman.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 30 + 'px)';
+    });	
+}

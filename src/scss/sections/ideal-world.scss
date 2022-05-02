@@ -19,6 +19,10 @@
             & .ideal-world__play {
                 transform: scale(1.05);
             }
+
+            & .ideal-world__bg {
+                transform: scale(1.05);
+            }
         }
     }
 }
@@ -81,10 +85,10 @@
     left: 0;
     width: 100%;
     height: 100%;
+    transition: $tr;
 
     & img {
         object-fit: cover;
-        transition: $tr;
     }
 }
 
@@ -95,10 +99,26 @@
     width: 68%;
     height: 110%;
     transition: $tr;
+
+    & img {
+        animation: flyIWHero 8s 2s infinite;
+    }
+
+    @keyframes flyIWHero {
+        0% {
+            transform: translate(0,0);
+        }
+        50% {
+            transform: translate(10px, -10px) scale(1.05);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
 }
 
 .ideal-world__hero-bg {
-    right: 0;
+    right: -2px;
     z-index: -1;
     display: flex;
     justify-content: flex-end;

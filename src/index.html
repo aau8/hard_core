@@ -78,14 +78,18 @@
                     <div class="main-status">
                         <div class="heroes">
                             <div class="hero-man">
-                                <img class="hero-man__hero" src="@img/heroes/man/hero.png" alt="">
-                                <img class="hero-man__shadow-main" src="@img/heroes/man/shadow-main.png" alt="">
+                                <div class="hero-man__wrap">
+                                    <img class="hero-man__hero" src="@img/heroes/man/hero.png" alt="">
+                                    <img class="hero-man__shadow-main" src="@img/heroes/man/shadow-main.png" alt="">
+                                </div>
                             </div>
                             <div class="hero-woman">
-                                <img class="hero-woman__hero" src="@img/heroes/woman/hero.png" alt="">
-                                <img class="hero-woman__shadow-main" src="@img/heroes/woman/shadow-main.png" alt="">
-                                <img class="hero-woman__shadow-sphere" src="@img/heroes/woman/shadow-sphere.png" alt="">
-                                <img class="hero-woman__shadow-sphere-small" src="@img/heroes/woman/shadow-sphere-small.png" alt="">
+                                <div class="hero-woman__wrap">
+                                    <img class="hero-woman__hero" src="@img/heroes/woman/hero.png" alt="">
+                                    <img class="hero-woman__shadow-main" src="@img/heroes/woman/shadow-main.png" alt="">
+                                    <img class="hero-woman__shadow-sphere" src="@img/heroes/woman/shadow-sphere.png" alt="">
+                                    <img class="hero-woman__shadow-sphere-small" src="@img/heroes/woman/shadow-sphere-small.png" alt="">
+                                </div>
                             </div>
                         </div>
                         <div class="server">
@@ -106,7 +110,19 @@
                             <p class="main-info server__time">Время сервера: <span>14:34:59</span></p>
                         </div>
                     </div>
-                    <div class="main-fire"><img src="@img/fire/fire-content.png" alt=""></div>
+                    <div class="main-fire">
+                        <div class="main-fire__sparks">
+                            <img class="mfs-center-big-sparks" src="@img/fire/fire-main/sparks/center-big-spark.png" alt="">
+                            <img class="mfs-center-small-spark" src="@img/fire/fire-main/sparks/center-small-spark.png" alt="">
+                            <img class="mfs-center-spark" src="@img/fire/fire-main/sparks/center-spark.png" alt="">
+                            <img class="mfs-small-spark" src="@img/fire/fire-main/sparks/small-spark.png" alt="">
+                        </div>
+                        <div class="main-fire__fire">
+                            <img class="mff-main" src="@img/fire/fire-main/fire.png" alt="">
+                            <img class="mff-light" src="@img/fire/fire-main/fire-light.png" alt="">
+                        </div>
+                        <!-- <img src="@img/fire/fire-content.png" alt=""> -->
+                    </div>
                 </div>
             </div>
             <div class="main__bg"><img src="@img/main-bg.png" alt=""></div>
@@ -298,12 +314,14 @@
                         </section>
                         <div class="contacts">
                             <a href="#" class="contacts-btn contacts__discord">
+                                <div class="contacts-btn__bg"><img src="@img/contacts/discord/bg.png" alt=""></div>
                                 <div class="contacts-btn__wrap">
                                     <div class="contacts-btn__icon"><img src="@img/contacts/discord/icon.png" alt=""></div>
                                     <span class="contacts-btn__text">Discord</span>
                                 </div>
                             </a>
                             <a href="#" class="contacts-btn contacts__telegram">
+                                <div class="contacts-btn__bg"><img src="@img/contacts/telegram/bg.png" alt=""></div>
                                 <div class="contacts-btn__wrap">
                                     <div class="contacts-btn__icon"><img src="@img/contacts/telegram/icon.png" alt=""></div>
                                     <span class="contacts-btn__text">Telegram</span>
