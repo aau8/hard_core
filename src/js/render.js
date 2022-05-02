@@ -8,13 +8,15 @@ const parallaxHeroMan = new Parallax(document.querySelector('.hero-man'))
 const parallaxHeroWoman = new Parallax(document.querySelector('.hero-woman'))
 
 // Паралакс фона на главной при скролле
-const mainBg = document.querySelector('.main__bg img')
-
-mainBg.style.top = window.scrollY / 4 + 'px'
-
-document.addEventListener('scroll', function(){
-  mainBg.style.top = window.scrollY / 4 + 'px'
-});
+if (window.innerWidth > 768) {
+    const mainBg = document.querySelector('.main__bg img')
+    
+    mainBg.style.top = window.scrollY / 4 + 'px'
+    
+    document.addEventListener('scroll', function(){
+      mainBg.style.top = window.scrollY / 4 + 'px'
+    });
+}
 
 // hover-эффект у таблицы с рейтингом
 const table = document.querySelector('.rating__table')
