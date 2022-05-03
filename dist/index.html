@@ -9,8 +9,8 @@
 	<meta name="description" content="Description">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap&_v=20220502230343" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.min.css?_v=20220502230343">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap&_v=20220503214355" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css?_v=20220503214355">
 </head>
 
 <body>
@@ -66,7 +66,24 @@
             <div class="container">
                 <div class="main__wrap">
                     <div class="main-start">
-                        <div class="main-start__logo"><picture><source srcset="./img/main-logo.webp" type="image/webp"><img src="./img/main-logo.png" alt=""></picture></div>
+                        <div class="main-start__logo">
+                            <div class="msl__path msl__shadow">
+                                <picture><source srcset="./img/main-logo/shadow.webp" type="image/webp"><img class="" src="./img/main-logo/shadow.png" alt=""></picture>
+                            </div>
+                            <div class="msl__path msl__seal">
+                                <picture><source srcset="./img/main-logo/seal.webp" type="image/webp"><img class="" src="./img/main-logo/seal.png" alt=""></picture>
+                            </div>
+                            <div class="msl__path msl__fenix">
+                                <picture><source srcset="./img/main-logo/fenix.webp" type="image/webp"><img src="./img/main-logo/fenix.png" alt="" data-depth=".2"></picture>
+                            </div>
+                            <div class="msl__path msl__sphere" >
+                                <picture><source srcset="./img/main-logo/sphere.webp" type="image/webp"><img class="" src="./img/main-logo/sphere.png" alt=""></picture>
+                                <picture><source srcset="./img/main-logo/sphere-light.webp" type="image/webp"><img class="msl__sphere-light" src="./img/main-logo/sphere-light.png" alt=""></picture>
+                            </div>
+                            <div class="msl__path msl__title" >
+                                <picture><source srcset="./img/main-logo/title.webp" type="image/webp"><img class="" src="./img/main-logo/title.png" alt="" data-depth="-.4"></picture>
+                            </div>
+                        </div>
                         <div class="main-start__content">
                             <button class="btn main-start-btn">
                                 <span class="btn__bg main-start-btn__bg"></span>
@@ -84,7 +101,7 @@
                                 </div>
                             </div>
                             <div class="hero-woman">
-                                <div class="hero-woman__wrap" data-depth=".2">
+                                <div class="hero-woman__wrap">
                                     <picture><source srcset="./img/heroes/woman/hero.webp" type="image/webp"><img class="hero-woman__hero" src="./img/heroes/woman/hero.png" alt=""></picture>
                                     <picture><source srcset="./img/heroes/woman/shadow-main.webp" type="image/webp"><img class="hero-woman__shadow-main" src="./img/heroes/woman/shadow-main.png" alt=""></picture>
                                     <div class="hero-woman__shadow-sphere">
@@ -500,7 +517,7 @@
 		</div>
 	</div>
 
-    <script src="./js/bundle.min.js?_v=20220502230343"></script>
+    <script src="./js/bundle.min.js?_v=20220503214355"></script>
 </body>
 
 </html>

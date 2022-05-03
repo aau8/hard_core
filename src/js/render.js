@@ -4,11 +4,16 @@ import Parallax from 'parallax-js'
 isWebp()
 
 // Паралакс героев
-const parallaxHeroMan = new Parallax(document.querySelector('.hero-man'))
-const parallaxHeroWoman = new Parallax(document.querySelector('.hero-woman'))
+// const parallaxHeroMan = new Parallax(document.querySelector('.hero-man'))
+// const parallaxHeroWoman = new Parallax(document.querySelector('.hero-woman'))
+// new Parallax(document.querySelector('.msl__title'))
+// new Parallax(document.querySelector('.msl__sphere'))
 
-// Паралакс фона на главной при скролле
+
 if (window.innerWidth > 768) {
+    new Parallax(document.querySelector('.msl__fenix'))
+    
+    // Паралакс фона на главной при скролле
     const mainBg = document.querySelector('.main__bg img')
     
     mainBg.style.top = window.scrollY / 4 + 'px'
