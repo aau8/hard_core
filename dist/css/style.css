@@ -1162,9 +1162,9 @@ body._lock {
 }
 
 .msl__fenix {
-  -webkit-transform: translate(-50%, -50%) !important;
-      -ms-transform: translate(-50%, -50%) !important;
-          transform: translate(-50%, -50%) !important;
+  -webkit-transform: translate(-50%, -37%) !important;
+      -ms-transform: translate(-50%, -37%) !important;
+          transform: translate(-50%, -37%) !important;
 }
 
 .msl__sphere {
