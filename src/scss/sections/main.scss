@@ -110,7 +110,11 @@
 }
 
 .msl__fenix {
-    transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -37%) !important;
+
+    @media (max-width: $tablet) {
+        transform: translate(-50%, -50%) !important;
+    }
 }
 
 .msl__sphere {

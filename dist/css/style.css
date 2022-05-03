@@ -3283,6 +3283,12 @@ discuss-forum__text {
     max-width: 340px;
   }
 
+  .msl__fenix {
+    -webkit-transform: translate(-50%, -50%) !important;
+        -ms-transform: translate(-50%, -50%) !important;
+            transform: translate(-50%, -50%) !important;
+  }
+
   .main-start__content {
     margin-top: -20px;
   }
