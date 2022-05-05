@@ -24,9 +24,10 @@ export default function htmlBuild () {
             app.isProd,
             webpHtmlNosvg()
         ))
-        // .pipe(app.plugins.if(
-        //     app.isProd,
-        // ))
+        .pipe(app.plugins.if(
+            app.isProd,
+            replace('style.css', 'style.min.css')
+        ))
         .pipe(
             versionNumber({
                 'value': '%DT%', // добавляем дату и время в мс

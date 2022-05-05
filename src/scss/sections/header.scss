@@ -26,19 +26,7 @@ $hide-menu: 920px;
 }
 
 .header__logo {
-    position: relative;
-    width: 90px;
-    height: 100%;
-
-    & img {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(calc(-50% + 20px), 0);
-        width: auto;
-        height: 150%;
-        pointer-events: none;
-    }
+    height: 70%;
 }
 
 .menu {

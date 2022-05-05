@@ -643,21 +643,7 @@ body._lock {
 }
 
 .header__logo {
-  position: relative;
-  width: 90px;
-  height: 100%;
-}
-
-.header__logo img {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate(calc(-50% + 20px), 0);
-      -ms-transform: translate(calc(-50% + 20px), 0);
-          transform: translate(calc(-50% + 20px), 0);
-  width: auto;
-  height: 150%;
-  pointer-events: none;
+  height: 70%;
 }
 
 .menu__list {
