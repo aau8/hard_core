@@ -13,15 +13,24 @@ isWebp()
 if (window.innerWidth > 768) {
     new Parallax(document.querySelector('.msl__fenix'))
     
-    // Паралакс фона на главной при скролле
-    const mainBg = document.querySelector('.main__bg img')
     
-    mainBg.style.top = window.scrollY / 4 + 'px'
     
-    document.addEventListener('scroll', function(){
-      mainBg.style.top = window.scrollY / 4 + 'px'
-    });
+    // document.addEventListener('scroll', function(){
+        //       mainBg.style.top = window.scrollY * 5 + 'px'
+    // })
 }
+
+// Паралакс фона на главной при скролле
+// const mainBg = document.querySelector('.main__bg img')
+
+// requestAnimationFrame(changePosMainBg)
+// document.addEventListener('scroll', function(){
+//     requestAnimationFrame(changePosMainBg)
+// });
+
+// function changePosMainBg(ts){
+//     mainBg.style.transform = `translateY(${window.scrollY / 4}px)`
+// }
 
 // hover-эффект у таблицы с рейтингом
 const table = document.querySelector('.rating__table')
